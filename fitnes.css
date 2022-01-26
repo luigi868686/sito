@@ -240,6 +240,7 @@ li a:hover{
   color: black;
   cursor: pointer;
   user-select: none;
+  -webkit-user-select: none;
 }
 
 .articolo h2:hover {
