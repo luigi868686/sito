@@ -96,26 +96,10 @@ function rivela () {
            document.querySelectorAll(".guardami")[i].style.setProperty("--variabile","ioo 4s ease-in-out stop");
           }
       }
-
-
-
-
-
     }
 
 
-    //   else if ((altezzaviewport - oggettodd) < 300  && window.innerWidth < 420) {
-    //      document.querySelectorAll(".articleImg")[i].style.transform = "scale(1)";
-    //      document.querySelectorAll(".articleImg")[i].style.transition = "1s ease-in-out";
-    //      document.querySelectorAll(".articolo")[i].style.transform = "scale(1)";
-    //      document.querySelectorAll(".articolo")[i].style.transition = "transform 0.5s ease-in-out";
-    //      // str = document.querySelectorAll('.guardami')[i];
-    //      // eii = window.getComputedStyle(str, '::after');
-    //      // str.style.setProperty("--afterBack","kar 1.1s ease-in-out infinite");
-    //      // document.querySelectorAll(".guardami")[i].style.setProperty("--variabile","ioo 4s ease-in-out infinite");
-    //      // document.querySelectorAll(".mese")[i].style.color = "red";      }
-    // }
-  // }
+  
 
 
  //  altezzaviewport = window.innerHeight;
