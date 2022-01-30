@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, user-scalable=no,
 initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <title></title>
+
   </head>
   <body>
+    <img src="svg/tornaSu.svg" alt="" class="goUp">
+
     <nav id="naviga">
       <div id="logo">FITNESS4U</div>
 
@@ -22,7 +25,6 @@ initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 
 
     </div>
-      <img src="a.png" class="a" alt="">
       <img src="close.svg" alt="" class="close">
       <img src="menu.svg" alt="" class="openMenu">
     </nav>
@@ -161,11 +163,15 @@ initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 
 <!-- fine totale_bianco -->
 </div>
-
-<div class="goUp">scrollto per andare in alto
-
-</div>
+  <form method="post" onsubmit="sendEmail(); reset(); return false;" class="contattami" action="index.html" method="post">
+    <h1>Iscriviti alla Newsletter e ricevi gratuitamente l'opuscolo del cazzo</h1>
+    <p>inserisci la tua mail</p>
+    <input type="email" class="emailUser" name="" value="" placeholder="inserisci la tua mail">
+    <button type="button" name="button">invia</button>
+    <img src="svg/email.svg" alt="">
+  </form>
 
   <script type="text/javascript" src="file.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"t ype="text/javascript"></script>
   </body>
 </html>

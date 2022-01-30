@@ -5,10 +5,9 @@
 }
 
 body {
-  height: 2000px;
+  height: 3000px;
   background: white;
   font-family: 'Montserrat', sans-serif;
-  background: green;
 }
 
 .a {
@@ -433,9 +432,35 @@ li a:hover{
 background-position: -100%;
 }
 
-.goUp{
-  color: purple;
-  font-size: 33px;
+.goUp {
+z-index: 100;
+transform: scale(3);
+border-radius: 50%;
+position: sticky;
+left: 90%;
+top:90%;
+box-shadow: 5px 5px 10px 2px #333333;
+/* il display è none perchè viene cambiato da JS */
+}
+
+.goUp:active {
+  transform: scale(3) translateY(4px);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.contattamiContainer{
+  width: 100%;
+  height: 400px;
+  background: green;
+}
+
+.contattami {
+width: 100%;
+height: 200px;
+background: pink;
 }
 
 /* è solo per .guardami */
@@ -1048,6 +1073,12 @@ background-position: -100%;
     height: 23px;
     top: 3.2px;
   }
+  .goUp {
+  transform: scale(2);
+  left: 89%;
+  top:90%;
+  /* il display è none perchè viene cambiato da JS */
+  }
 }
 
 /* wwww */
@@ -1222,6 +1253,14 @@ background-position: -100%;
     height: 23px;
     top: 3.2px;
   }
+
+  .goUp {
+  transform: scale(2);
+  left: 89%;
+  top:90%;
+  /* il display è none perchè viene cambiato da JS */
+  }
+
 }
 
 

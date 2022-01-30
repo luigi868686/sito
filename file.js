@@ -114,4 +114,38 @@ function close () {
     document.querySelector(".openMenu").style.display=""
   open = false
   }
+};
+
+
+
+
+window.addEventListener("scroll",function() {
+  y=window.scrollY
+  console.log(y)
+  innerH = window.innerHeight;
+  console.log(innerH);
+  if (y<=innerH-240) {
+    document.querySelector(".goUp").style.display = "none";
+  }
+  if (y>innerH-240){
+    document.querySelector(".goUp").style.display = "";
+  }
+});
+
+document.querySelector(".goUp").addEventListener("click", function() {
+  window.scrollTo(0, 0)
+});
+
+function sendEmail() {
+  Email.send({
+    Host : "smtp.gmail.com",
+    Username : "luigi.argens@gmail.com",
+    Password : "password",
+    To : 'luigi.argens@gmail.com',
+    From : document.querySelector(".emailUser").value,
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
 }
