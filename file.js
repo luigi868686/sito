@@ -136,6 +136,18 @@ document.querySelector(".goUp").addEventListener("click", function() {
   window.scrollTo(0, 0)
 });
 
+
+
+document.querySelector(".contattami").addEventListener("submit", submitForm);
+
+function submitForm(event) {
+  event.preventDefault();
+  console.log(123)
+  let email = document.querySelector(".emeailUser").value;
+}
+
+
+
 function sendEmail() {
   Email.send({
     Host : "smtp.gmail.com",
