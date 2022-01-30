@@ -30,6 +30,7 @@ function rivela () {
       document.querySelectorAll(".articleImg")[i].classList.add("bbb");
       document.querySelectorAll(".articolo")[i].classList.add("ccc");
       document.querySelectorAll(".articoloContenitoreInterno")[i].classList.add("ddd");
+      document.querySelectorAll('.guardami')[i].classList.add("nnn");
       document.querySelectorAll('.guardami')[i].classList.add("ooo");
       document.querySelectorAll('.guardami')[i].classList.add("ppp");
     }
@@ -40,6 +41,7 @@ function rivela () {
       document.querySelectorAll(".articolo")[i].classList.remove("ccc");
       document.querySelectorAll(".articoloContenitoreInterno")[i].classList.remove("ddd");
       document.querySelectorAll(".articoloContenitoreInterno")[i].classList.add("eee");
+      document.querySelectorAll('.guardami')[i].classList.remove("nnn");
       document.querySelectorAll('.guardami')[i].classList.remove("ooo");
       document.querySelectorAll('.guardami')[i].classList.remove("ppp");
     }
@@ -52,7 +54,7 @@ function rivela () {
       document.querySelectorAll(".articoloContenitoreInterno")[i].classList.remove("eee");
       document.querySelectorAll('.guardami')[i].classList.remove("ooo");
       document.querySelectorAll('.guardami')[i].classList.remove("ppp");
-
+      document.querySelectorAll('.guardami')[i].classList.remove("ppp");
     }
   };
 }

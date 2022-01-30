@@ -169,7 +169,7 @@ li a:hover{
 
 .totale_bianco {
   display: flex;
-  /* margin-top: 550px; */
+  padding-top: 30px;
   width: 100%;
   background: white;
   justify-content: space-around;
@@ -295,7 +295,6 @@ li a:hover{
 
 .guardami {
   color:white;
-  box-shadow: 5px 5px 10px 2px #333333;
   font-size: 14px;
   font-weight: bold;
   text-align: left;
@@ -320,11 +319,14 @@ li a:hover{
 }
 
 .guardami:active {
+  /* in pratica sto inserendo una animaizone che non esiste per sovrascriverla a quella precedente altrimenti no mi fa effetto click e translatY */
+  animation: r 1s ease-in-out !important;
   transform: translateY(4px) !important;
 }
 
 .articolo:hover .guardami {
   animation: ruota 5s ease-in-out infinite;
+  box-shadow: 5px 5px 10px 2px #333333;
 }
 
 .articolo:hover .guardami:after {
@@ -445,11 +447,17 @@ background-position: -100%;
 
   .guardami {
     font-size: 12px;
-    font-weight: bold;
     width: 150px;
-    right:50%;
     /* devo impostare il seguente marin-right perchè altrimenti per questa larghezza screen non mi fa centrare */
     margin-right: -75px;
+    height: 30px;
+    line-height: 30px;
+
+  }
+  .guardami:after {
+    width:23px;
+    height: 23px;
+    top: 3.2px;
   }
 }
 
@@ -460,12 +468,18 @@ background-position: -100%;
   }
 
   .guardami {
-    font-size: 10px;
-    font-weight: bold;
+    font-size: 12px;
     width: 150px;
-    right:50%;
     /* devo impostare il seguente marin-right perchè altrimenti per questa larghezza screen non mi fa centrare */
     margin-right: -75px;
+    height: 30px;
+    line-height: 30px;
+
+  }
+  .guardami:after {
+    width:23px;
+    height: 23px;
+    top: 3.2px;
   }
 }
 
@@ -511,14 +525,6 @@ background-position: -100%;
     font-weight: normal;
   }
 
-
-  .totale_bianco {
-    /* matop: 150%; */
-    width: 100%;
-    justify-content: space-around;
-    padding-top: 1%;
-  }
-
   .articolo {
     width: 45%;
   }
@@ -531,6 +537,21 @@ background-position: -100%;
   .uno, .due {
     padding-top: 13px;
     line-height: 19px;
+  }
+
+  .guardami {
+    font-size: 12px;
+    width: 150px;
+    /* devo impostare il seguente marin-right perchè altrimenti per questa larghezza screen non mi fa centrare */
+    margin-right: -75px;
+    height: 30px;
+    line-height: 30px;
+
+  }
+  .guardami:after {
+    width:23px;
+    height: 23px;
+    top: 3.2px;
   }
 }
 
@@ -586,13 +607,6 @@ background-position: -100%;
     font-weight: normal;
   }
 
-  .totale_bianco {
-    /* top: 150%; */
-    width: 100%;
-    justify-content: space-around;
-    padding-top: 1%;
-  }
-
   .articolo {
     width: 45%;
     margin-bottom: 15px;
@@ -611,6 +625,22 @@ background-position: -100%;
   .uno, .due {
     padding-top: 13px;
     line-height: 19px;
+  }
+
+  .guardami {
+    font-size: 10px;
+    width: 125px;
+    /* devo impostare il seguente marin-right perchè altrimenti per questa larghezza screen non mi fa centrare */
+    margin-right: -62.5px;
+    height: 20px;
+    line-height: 20px;
+
+  }
+  .guardami:after {
+    width:12px;
+    height: 12px;
+    top: 4px;
+    right:5px;
   }
 }
 
@@ -672,12 +702,20 @@ background-position: -100%;
   }
 
   .guardami {
-    font-size: 12px;
-    font-weight: bold;
-    width: 150px;
-    right:50%;
+    font-size: 10px;
+    width: 125px;
     /* devo impostare il seguente marin-right perchè altrimenti per questa larghezza screen non mi fa centrare */
-    margin-right: -75px;
+    margin-right: -62.5px;
+    height: 20px;
+    line-height: 20px;
+
+  }
+  .guardami:after {
+    width:12px;
+    height: 12px;
+    top: 4px;
+    right:5px;
+  }
   }
 }
 
@@ -700,12 +738,19 @@ background-position: -100%;
   }
 
   .guardami {
-    font-size: 11px;
-    font-weight: bold;
-    width: 140px;
-    right:50%;
-      /* devo impostare il seguente marin-right perchè altrimenti per questa larghezza screen non mi fa centrare */
-    margin-right: -70px;
+    font-size: 10px;
+    width: 125px;
+    /* devo impostare il seguente marin-right perchè altrimenti per questa larghezza screen non mi fa centrare */
+    margin-right: -62.5px;
+    height: 20px;
+    line-height: 20px;
+  }
+
+  .guardami:after {
+    width:12px;
+    height: 12px;
+    top: 4px;
+    right:5px;
   }
 }
 
@@ -790,13 +835,6 @@ background-position: -100%;
     width: 100%;
   }
 
-  .totale_bianco {
-    /* top: 150%; */
-    width: 100%;
-    justify-content: space-around;
-    padding-top: 1%;
-  }
-
   .articolo {
     width: 45%;
     margin-bottom: 15px;
@@ -816,6 +854,24 @@ background-position: -100%;
     padding-top: 12.5px;
     line-height: 19px;
   }
+
+  .guardami {
+    font-size: 10px;
+    width: 125px;
+    /* devo impostare il seguente marin-right perchè altrimenti per questa larghezza screen non mi fa centrare */
+    margin-right: -62.5px;
+    height: 20px;
+    line-height: 20px;
+  }
+
+  .guardami:after {
+    width:12px;
+    height: 12px;
+    top: 4px;
+    right:5px;
+  }
+
+
 }
 
 @media (min-width:425px) and (max-width:480px) {
@@ -925,13 +981,6 @@ background-position: -100%;
     cursor: pointer;
   }
 
-  .totale_bianco {
-    /* top: 150%; */
-    width: 100%;
-    justify-content: space-around;
-    padding-top: 1%;
-  }
-
   .contenitore_articoli {
     width:70%;
   }
@@ -983,6 +1032,21 @@ background-position: -100%;
 
   .container2 {
     display: none;
+  }
+
+  .guardami {
+    font-size: 12px;
+    width: 150px;
+    /* devo impostare il seguente marin-right perchè altrimenti per questa larghezza screen non mi fa centrare */
+    margin-right: -75px;
+    height: 30px;
+    line-height: 30px;
+
+  }
+  .guardami:after {
+    width:23px;
+    height: 23px;
+    top: 3.2px;
   }
 }
 
@@ -1094,13 +1158,6 @@ background-position: -100%;
     cursor: pointer;
   }
 
-  .totale_bianco {
-    /* height: : 400px; */
-    width: 100%;
-    justify-content: space-around;
-    padding-top: 1%;
-  }
-
   .contenitore_articoli {
     width:80%;
   }
@@ -1150,6 +1207,20 @@ background-position: -100%;
 
   .container2 {
     display: none;
+  }
+  .guardami {
+    font-size: 12px;
+    width: 150px;
+    /* devo impostare il seguente marin-right perchè altrimenti per questa larghezza screen non mi fa centrare */
+    margin-right: -75px;
+    height: 30px;
+    line-height: 30px;
+
+  }
+  .guardami:after {
+    width:23px;
+    height: 23px;
+    top: 3.2px;
   }
 }
 
@@ -1221,6 +1292,11 @@ transition:  1s ease-in-out !important;
 
 .eee {
   box-shadow: none;
+  transition: 1s ease-in-out;
+}
+
+.nnn{
+  box-shadow: 5px 5px 10px 2px #333333;
   transition: 1s ease-in-out;
 }
 
