@@ -18,7 +18,7 @@ body {
 .close {
 position: absolute;
 right: 30px;
-transform: scale(3);
+transform: scale(2.7);
 cursor:pointer;
 }
 
@@ -29,7 +29,7 @@ cursor:pointer;
 .openMenu {
   position: absolute;
   right: 30px;
-  transform: scale(3);
+  transform: scale(2.7);
   cursor:pointer;
 }
 
@@ -39,7 +39,7 @@ cursor:pointer;
 
 #naviga {
   width: 100%;
-  height: 120px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content:space-between;
@@ -125,11 +125,15 @@ li a:hover{
   color: white;
   text-align:right;
   cursor: pointer;
-  user-select: none;
+  /* user-select: none; */
 }
 
 .scrittaHome2{
   font-size: 60px;
+}
+
+.scrittaHome:hover {
+  color:red;
 }
 
 /* .contenitoreVideo{
@@ -434,6 +438,11 @@ background-position: -100%;
 
 /* è solo per .guardami */
 @media (min-width:830px) and (max-width:1028px) {
+  #naviga {
+    height: 80px;
+    z-index: 1;
+  }
+
   .guardami {
     font-size: 12px;
     font-weight: bold;
@@ -445,8 +454,13 @@ background-position: -100%;
 }
 
 @media (min-width:768px) and (max-width:829px) {
+  #naviga {
+    height: 80px;
+    z-index: 1;
+  }
+
   .guardami {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
     width: 150px;
     right:50%;
@@ -458,6 +472,10 @@ background-position: -100%;
 
 @media (min-width:700px) and (max-width:767px) {
 
+  #naviga {
+    height: 80px;
+    z-index: 1;
+  }
 
   #menu {
     display: block;
@@ -520,6 +538,11 @@ background-position: -100%;
 
 
 @media (min-width:520px) and (max-width:699px) {
+  #naviga {
+    height: 80px;
+    z-index: 1;
+  }
+
   .menuContainer {
     position: absolute;
     background: black;
@@ -593,7 +616,10 @@ background-position: -100%;
 
 /* è solo per .guardami */
 @media (min-width:545px) and (max-width:625px) {
-
+    #naviga {
+      height: 80px;
+      z-index: 1;
+    }
 
     .menuContainer {
       position: absolute;
@@ -611,6 +637,13 @@ background-position: -100%;
       line-height: 50px;
     }
 
+    .close {
+    transform: scale(2.5);
+    }
+
+    .openMenu {
+      transform: scale(2.5);
+    }
 
   li {
     border-top: 1px solid white;
@@ -651,6 +684,21 @@ background-position: -100%;
   /* è solo per .guardami */
 @media (min-width:481px) and (max-width:544px) {
 
+  #logo {
+    position:absolute;
+    z-index: 1;
+    margin-left: 10px;
+    font-size: 20px;
+  }
+
+  .close {
+  transform: scale(2);
+  }
+
+  .openMenu {
+    transform: scale(2);
+  }
+
   .guardami {
     font-size: 11px;
     font-weight: bold;
@@ -661,19 +709,25 @@ background-position: -100%;
   }
 }
 
-
-
-
-
 @media (min-width:481px) and (max-width:519px) {
   #naviga {
-    height: 90px;
+    height: 80px;
     z-index: 1;
   }
 
   #logo {
     position:absolute;
     z-index: 1;
+    margin-left: 10px;
+    font-size: 20px;
+  }
+
+  .close {
+  transform: scale(2);
+  }
+
+  .openMenu {
+    transform: scale(2);
   }
 
   .menuContainer {
@@ -773,6 +827,16 @@ background-position: -100%;
   #logo {
     position:absolute;
     z-index: 1;
+    margin-left: 10px;
+    font-size: 20px;
+  }
+
+  .close {
+  transform: scale(2);
+  }
+
+  .openMenu {
+    transform: scale(2);
   }
 
   .menuContainer {
@@ -782,7 +846,6 @@ background-position: -100%;
     right: 0px;
     box-shadow: 5px 5px 10px 2px #333333;
  }
-
 
   #menu {
     display: block;
@@ -934,6 +997,15 @@ background-position: -100%;
   #logo {
     position:absolute;
     z-index: 1;
+    margin-left: 10px;
+    font-size: 20px;
+  }
+  .close {
+  transform: scale(2);
+  }
+
+  .openMenu {
+    transform: scale(2);
   }
 
   .menuContainer {
