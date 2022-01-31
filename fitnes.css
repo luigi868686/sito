@@ -170,7 +170,7 @@ li a:hover{
   display: flex;
   padding-top: 30px;
   width: 100%;
-  background: white;
+  background:  #fffdd0 ;
   justify-content: space-around;
   z-index: 1;
 }
@@ -190,6 +190,7 @@ li a:hover{
   position: relative;
   transform: scale(1);
   transition: 0.5s;
+
 }
 
 .articolo:hover{
@@ -201,9 +202,9 @@ li a:hover{
   color: red;
 }
 
-.articolo:hover .articleImg{
+/* .articolo:hover .articleImg{
   transform: scale(1.2);
-}
+} */
 
 .articoloContenitoreInterno {
   overflow: hidden;
@@ -214,7 +215,13 @@ li a:hover{
 
 .articoloContenitoreInterno:hover {
   box-shadow: 5px 5px 10px 2px #333333;
+  background: white;
 }
+
+.articoloContenitoreInterno:hover .articleImg{
+  transform: scale(1.2);
+}
+
 
 .articoloContImg {
   overflow: hidden;
@@ -299,7 +306,7 @@ li a:hover{
   text-align: left;
   width: 169px;
   right:50%;
-  background-color: red;
+  background-color: black;
   /* devo impostare il seguente marin-right perchè altrimenti per questa larghezza screen non mi fa centrare */
   margin-right: -84.5px;
   height: 40px;
@@ -314,8 +321,10 @@ li a:hover{
 }
 
 .guardami:hover {
-  background-color: #ff3b3b;
+  /* background-color: #262626; */
+  color:red;
 }
+
 
 .guardami:active {
   /* in pratica sto inserendo una animaizone che non esiste per sovrascriverla a quella precedente altrimenti no mi fa effetto click e translatY */
@@ -353,18 +362,18 @@ li a:hover{
 }
 
 @keyframes ioo {
-  0% {transform: rotate(2deg);}
-  20% {transform: rotate(-2deg);}
-  40% {transform: rotate(2deg);}
-  60% {transform: rotate(-2deg);}
-  90% {transform: rotate(0deg);}
+  0% {transform: rotate(1.5deg);}
+  20% {transform: rotate(-1.5deg);}
+  40% {transform: rotate(1.5deg);}
+  60% {transform: rotate(-1.5deg);}
+  90% {transform: rotate(1.5deg);}
 }
 
 @keyframes ruota {
-  0% {transform: rotate(2deg);}
-  20% {transform: rotate(-2deg);}
-  40% {transform: rotate(2deg);}
-  60% {transform: rotate(-2deg);}
+  0% {transform: rotate(1.5deg);}
+  20% {transform: rotate(-1.5deg);}
+  40% {transform: rotate(1.5deg);}
+  60% {transform: rotate(-1.5deg);}
   90% {transform: rotate(0deg);}
 }
 
@@ -450,18 +459,14 @@ box-shadow: 5px 5px 10px 2px #333333;
 html {
   scroll-behavior: smooth;
 }
-
+/*
 .contattamiContainer{
   width: 100%;
   height: 400px;
   background: green;
-}
+  display: flex;
+} */
 
-.contattami {
-width: 100%;
-height: 200px;
-background: pink;
-}
 
 /* è solo per .guardami */
 @media (min-width:830px) and (max-width:1028px) {
@@ -900,6 +905,72 @@ background: pink;
 }
 
 @media (min-width:425px) and (max-width:480px) {
+
+  /* AAA here start from https://www.proglobalbusinesssolutions.com/css-hover-effects/ ...studyit */
+    nav{
+      float: none;
+      clear: both;
+      width: 30%;
+      /* margin: 10% auto; */
+      background: #eee;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0px;
+      /* padding: 0px; */
+      background-color: #e74c3c;
+      padding-top: 350px;
+
+    }
+
+    nav li{
+      float: none;
+      width: 100%;
+      text-shadow: none;
+    }
+
+    nav li a {
+      display: block;
+      width: 100%;
+      padding: 20px;
+      border-left: 5px solid;
+      position: relative;
+      z-index: 2;
+      text-decoration: none;
+      color: #444;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      background: #fff;
+    }
+
+    nav li a:hover{ border-bottom: 0px; color: #fff;}
+    nav li:first-child a{ border-left: 20px solid #3498db; }
+    nav li:nth-child(2) a{ border-left: 20px solid #ffd071; }
+    nav li:nth-child(3) a{ border-left: 20px solid #f0776c; }
+    nav li:last-child a{ border-left: 20px solid #1abc9c; }
+
+    nav li a:after {
+      content: "";
+      height: 100%;
+      left: 0;
+      top: 0;
+      width: 0px;
+      position: absolute;
+      transition: all 0.3s ease 0s;
+      -webkit-transition: all 0.3s ease 0s;
+      z-index: -1;
+    }
+
+    nav li a:hover:after{ width: 100%; }
+    nav li:first-child a:after{ background: #3498db; }
+    nav li:nth-child(2) a:after{ background: #ffd071; }
+    nav li:nth-child(3) a:after{ background: #f0776c; }
+    nav li:last-child a:after{ background: #1abc9c; }
+
+    /* AAA here finish from https://www.proglobalbusinesssolutions.com/css-hover-effects/ ...studyit */
+
   #naviga {
     height: 80px;
     z-index: 1;
@@ -931,11 +1002,12 @@ background: pink;
   #menu {
     display: block;
     margin-top: 0px;
-    padding-top: 800px;
+    padding-top: 950px;
     /* background-color: black; */
     line-height: 50px;
     width: 100%;
     padding-bottom: 400px;
+    /* background: red; */
   }
 
   li {
@@ -1084,6 +1156,70 @@ background: pink;
 /* wwww */
 
 @media (min-width:0px) and (max-width:424px)  {
+
+/* AAA here start from https://www.proglobalbusinesssolutions.com/css-hover-effects/ ...studyit */
+  nav{
+    float: none;
+    clear: both;
+    width: 30%;
+    /* margin: 10% auto; */
+    background: #eee;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  nav li{
+    float: none;
+    width: 100%;
+    text-shadow: none;
+  }
+
+  nav li a {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border-left: 5px solid;
+    position: relative;
+    z-index: 2;
+    text-decoration: none;
+    color: #444;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: #fff;
+  }
+
+  nav li a:hover{ border-bottom: 0px; color: #fff;}
+  nav li:first-child a{ border-left: 20px solid #3498db; }
+  nav li:nth-child(2) a{ border-left: 20px solid #ffd071; }
+  nav li:nth-child(3) a{ border-left: 20px solid #f0776c; }
+  nav li:last-child a{ border-left: 20px solid #1abc9c; }
+
+  nav li a:after {
+    content: "";
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 0px;
+    position: absolute;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    z-index: -1;
+  }
+
+  nav li a:hover:after{ width: 100%; }
+  nav li:first-child a:after{ background: #3498db; }
+  nav li:nth-child(2) a:after{ background: #ffd071; }
+  nav li:nth-child(3) a:after{ background: #f0776c; }
+  nav li:last-child a:after{ background: #1abc9c; }
+
+  /* AAA here finish from https://www.proglobalbusinesssolutions.com/css-hover-effects/ ...studyit */
+
+
   #naviga {
     height: 80px;
     z-index: 1;
@@ -1107,45 +1243,45 @@ background: pink;
     position: absolute;
     width:100%;
     right: 0px;
-    /* box-shadow: 5px 5px 10px 2px #333333; */
-
-    height: 500px;
+    box-shadow: 5px 5px 10px 2px #333333;
+    height: 80px;
  }
+
 
   #menu {
     display: block;
     margin-top: 0px;
-    padding-top: 350px;
-    background-color: black;
+    padding-top: 100px;
+    background-color: #e74c3c;
     line-height: 50px;
     width:100%;
     padding-bottom: 600px;
   }
 
-  li {
+  /* li {
     border-top: 1px solid white;
     width:100%;
     text-align: center;
     padding-left: 0px;
     margin-right: 0px;
     transition: padding-left 0.6s ease-in;
-  }
+  } */
 
-  li:hover {
+  /* li:hover {
     cursor:pointer;
     background-color: #1E1E1E;
     transition: padding-left 0.5s ease-out;
-  }
+  } */
 
-  li:hover a{
+  /* li:hover a{
   color:red;
   transition:0.5s;
-  }
+  } */
 
-  li a:hover {
+  /* li a:hover {
     color: red;
     font-weight: normal;
-  }
+  } */
 
   .scrittaHome{
     transform: scale(0.01);
@@ -1319,14 +1455,16 @@ transform:  scale(1.2)!important;
 transition:  1s ease-in-out !important;
 }
 
-.ccc {
+/* .ccc {
   transform: scale(1.02) !important;
   transition: 0.5s ease-in-out!important;
-}
+} */
 
 .ddd {
   box-shadow: 5px 5px 10px 2px #333333 !important;
-  transition: 1s ease-in-out;
+  transition: box-shadow 1s ease-in-out, transform 0.5s ease-in-out!important;
+  transform: scale(1.02) !important;
+  background: white;
 }
 
 .eee {

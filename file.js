@@ -2,6 +2,7 @@ window.addEventListener("load", function(){
   document.querySelector(".scrittaHome").style.transform="scale(1.1)";
   document.querySelector(".scrittaHome").style.transition="all 1s";
   document.querySelector(".scrittaHome").style.transitionDelay="0.7s";
+  document.querySelector(".goUp").style.display = "none";
 });
 
   document.querySelector(".scrittaHome").addEventListener("mouseover", function(){
@@ -28,7 +29,7 @@ function rivela () {
     if  ((altezzaviewport - oggettodd) > altezzaOggetto/1.7 && (altezzaviewport - oggettodd) <  altezzaOggetto*2 && window.matchMedia("(max-width:480px)").matches)  {
       document.querySelectorAll(".mese")[i].classList.add("aaa");
       document.querySelectorAll(".articleImg")[i].classList.add("bbb");
-      document.querySelectorAll(".articolo")[i].classList.add("ccc");
+      // document.querySelectorAll(".articolo")[i].classList.add("ccc");
       document.querySelectorAll(".articoloContenitoreInterno")[i].classList.add("ddd");
       document.querySelectorAll('.guardami')[i].classList.add("nnn");
       document.querySelectorAll('.guardami')[i].classList.add("ooo");
@@ -38,7 +39,7 @@ function rivela () {
     else if (((altezzaviewport - oggettodd) <= altezzaOggetto/1.7 | (altezzaviewport - oggettodd) >= altezzaOggetto*2)  && window.matchMedia("(max-width:480px)").matches) {
       document.querySelectorAll(".mese")[i].classList.remove("aaa");
       document.querySelectorAll(".articleImg")[i].classList.remove("bbb");
-      document.querySelectorAll(".articolo")[i].classList.remove("ccc");
+      // document.querySelectorAll(".articolo")[i].classList.remove("ccc");
       document.querySelectorAll(".articoloContenitoreInterno")[i].classList.remove("ddd");
       document.querySelectorAll(".articoloContenitoreInterno")[i].classList.add("eee");
       document.querySelectorAll('.guardami')[i].classList.remove("nnn");
@@ -49,7 +50,7 @@ function rivela () {
     else if (window.innerWidth > 480) {
       document.querySelectorAll(".mese")[i].classList.remove("aaa");
       document.querySelectorAll(".articleImg")[i].classList.remove("bbb");
-      document.querySelectorAll(".articolo")[i].classList.remove("ccc");
+      // document.querySelectorAll(".articolo")[i].classList.remove("ccc");
       document.querySelectorAll(".articoloContenitoreInterno")[i].classList.remove("ddd");
       document.querySelectorAll(".articoloContenitoreInterno")[i].classList.remove("eee");
       document.querySelectorAll('.guardami')[i].classList.remove("ooo");
@@ -138,26 +139,26 @@ document.querySelector(".goUp").addEventListener("click", function() {
 
 
 
-document.querySelector(".contattami").addEventListener("submit", submitForm);
-
-function submitForm(event) {
-  event.preventDefault();
-  console.log(123)
-  let email = document.querySelector(".emeailUser").value;
-}
-
-
-
-function sendEmail() {
-  Email.send({
-    Host : "smtp.gmail.com",
-    Username : "luigi.argens@gmail.com",
-    Password : "password",
-    To : 'luigi.argens@gmail.com',
-    From : document.querySelector(".emailUser").value,
-    Subject : "This is the subject",
-    Body : "And this is the body"
-}).then(
-  message => alert(message)
-);
-}
+// document.querySelector(".contattami").addEventListener("submit", submitForm);
+//
+// function submitForm(event) {
+//   event.preventDefault();
+//   console.log(123)
+//   let email = document.querySelector(".emeailUser").value;
+// }
+//
+//
+//
+// function sendEmail() {
+//   Email.send({
+//     Host : "smtp.gmail.com",
+//     Username : "luigi.argens@gmail.com",
+//     Password : "password",
+//     To : 'luigi.argens@gmail.com',
+//     From : document.querySelector(".emailUser").value,
+//     Subject : "This is the subject",
+//     Body : "And this is the body"
+// }).then(
+//   message => alert(message)
+// );
+// }

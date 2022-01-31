@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="fitnes.css">
+    <link rel="stylesheet" href="form.css">
     <meta name="viewport" content="width=device-width, user-scalable=no,
 initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <title></title>
@@ -164,11 +165,13 @@ initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 <!-- fine totale_bianco -->
 </div>
   <form method="post" onsubmit="sendEmail(); reset(); return false;" class="contattami" action="index.html" method="post">
-    <h1>Iscriviti alla Newsletter e ricevi gratuitamente l'opuscolo</h1>
-    <p>inserisci la tua mail</p>
-    <input type="email" class="emailUser" name="" value="" placeholder="inserisci la tua mail">
-    <button type="submit" name="button">invia</button>
-    <img src="svg/email.svg" alt="">
+    <h1 class="testo1Contattati">Iscriviti alla Newsletter e ricevi gratuitamente l'opuscolo</h1>
+<section class="emailSection">
+  <img src="svg/email.svg" alt="" class="emailIcon">
+  <input type="email" class="emailUser" name="" value="" placeholder="inserisci la tua mail">
+  <div class="emailSubmit" >invia</div>
+</section>
+
   </form>
 
   <script type="text/javascript" src="file.js"></script>
