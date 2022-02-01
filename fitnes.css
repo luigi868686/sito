@@ -5,10 +5,18 @@
 }
 
 body {
-  height: 3000px;
-  background: white;
+  /* height: 3500px; */
+  background: rgb(36,120,300);
   font-family: 'Montserrat', sans-serif;
 }
+
+.icon {
+  transform: scale(5);
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+
 
 .a {
   display: none;
@@ -21,19 +29,12 @@ transform: scale(2.7);
 cursor:pointer;
 }
 
-.close:hover {
-
-}
 
 .openMenu {
   position: absolute;
   right: 30px;
   transform: scale(2.7);
   cursor:pointer;
-}
-
-.openMenu:hover {
-
 }
 
 #naviga {
@@ -46,7 +47,7 @@ cursor:pointer;
   position: absolute;
   position: fixed;
   top: 0px;
-  z-index: 2;
+  z-index: 999;
   box-shadow: 5px 5px 10px 2px #333333;
 }
 
@@ -74,7 +75,7 @@ cursor:pointer;
   list-style: none;
   display: flex;
   text-decoration: none;
-}
+z-index: 99}
 
 li {
   margin-right: 15px;
@@ -106,12 +107,33 @@ li a:hover{
 
 .imaginehome {
   width: 100%;
-  max-width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* max-width: 100%; */
   position: fixed;
+  background: rgb(36,120,300);
+}
+
+.bene {
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 50px;
+  width:70px;
+  border-radius: 50%;
+}
+
+.bene1 {
+  margin-top: 300px;
+  margin-left: 50px;
+}
+
+.bene2 {
+  margin-top: 200px;
+  margin-left: 50px;
+}
+
+
+.bene4 {
+  margin-top: 100px;
+  margin-left: 50px;
 }
 
 .scrittaHome{
@@ -170,7 +192,7 @@ li a:hover{
   display: flex;
   padding-top: 30px;
   width: 100%;
-  background:  #fffdd0 ;
+  background: rgb(255,237,167) ;
   justify-content: space-around;
   z-index: 1;
 }
@@ -472,7 +494,7 @@ html {
 @media (min-width:830px) and (max-width:1028px) {
   #naviga {
     height: 80px;
-    z-index: 1;
+    /* z-index: 1; */
   }
 
   .guardami {
@@ -494,7 +516,7 @@ html {
 @media (min-width:768px) and (max-width:829px) {
   #naviga {
     height: 80px;
-    z-index: 1;
+    /* z-index: 1; */
   }
 
   .guardami {
@@ -518,7 +540,7 @@ html {
 
   #naviga {
     height: 80px;
-    z-index: 1;
+    /* z-index: 1; */
   }
 
   #menu {
@@ -591,7 +613,7 @@ html {
 @media (min-width:520px) and (max-width:699px) {
   #naviga {
     height: 80px;
-    z-index: 1;
+    /* z-index: 1; */
   }
 
   .menuContainer {
@@ -678,7 +700,7 @@ html {
 @media (min-width:545px) and (max-width:625px) {
     #naviga {
       height: 80px;
-      z-index: 1;
+      /* z-index: 1; */
     }
 
     .menuContainer {
@@ -787,7 +809,7 @@ html {
 @media (min-width:481px) and (max-width:519px) {
   #naviga {
     height: 80px;
-    z-index: 1;
+    /* z-index: 1; */
   }
 
   #logo {
@@ -973,7 +995,7 @@ html {
 
   #naviga {
     height: 80px;
-    z-index: 1;
+    /* z-index: 1; */
   }
 
   #logo {
@@ -1222,7 +1244,7 @@ html {
 
   #naviga {
     height: 80px;
-    z-index: 1;
+    /* z-index: 1; */
   }
 
   #logo {
@@ -1414,23 +1436,23 @@ html {
     z-index: -1;
   }
 
-  .imaginehome {
+  /* .imaginehome {
   transform: translate(-50%, -50%) scale(1.4);
-  }
+  } */
 }
 
 @media (min-width:481px) and (max-width:599px) {
 
-  .imaginehome {
+  /* .imaginehome {
   transform: translate(-50%, -50%) scale(1.7);
-  }
+  } */
 }
 
 @media (min-width:425px) and (max-width:480px) {
 
-  .imaginehome {
+  /* .imaginehome {
   transform: translate(-50%, -50%) scale(2);
-  }
+  } */
 }
 
 @media (min-width:0px) and (max-width:424px)  {
@@ -1438,10 +1460,10 @@ html {
   .imagineContainer {
     height: 405px;
   }
-  .imaginehome {
+  /* .imaginehome {
     top:34%;
     transform: translate(-50%, -50%) scale(2.3);
-  }
+  } */
 }
 /* 1) FINE MEDIA PER L'IMMAGINE HOME */
 
