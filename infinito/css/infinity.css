@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.cubo {
+  width: 100%;
+  height: 600px;
+  perspective:1100px;
+  perspective-origin:50% calc(1%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(b.webp);
+  /* background-image: url(images/a.jpg); */
+  overflow: hidden;
+  transform: scale(1);
+}
+
+.asse {
+  position:relative;
+  /* Background: red; */
+  /* height:300px; */
+  /* qui sposti l'asse e quindi il cubo: la Y te lo porta su e giu, la Z in profondità o lo avvicina */
+  /* transform:   translateY(-30px) translateZ(500px); */
+
+  transform-style: preserve-3d;
+  animation:  e 30s infinite linear;
+}
+.pavimento {
+  position:absolute;
+  /* border-radius: 50%; */
+  background-image:radial-gradient(#0000, #000 74%), repeating-conic-gradient(from 45deg,#111 0deg 90deg, #222 90deg 180deg);
+  background-size:100%, 50px 50px;
+  width:1500px;
+  height: 1500px;
+  top:50%;
+  left:50%;
+  transform:
+    rotateX(-90deg)
+    translate3d(-50%, 0%, -700px);
+  opacity:0.5;
+}
+
+.lato{
+box-shadow:  0 0 10px #000a inset;
+}
+
+.base {
+  position:absolute;
+  background: #0007;
+  width:100px;
+  height: 100px;
+  top:50%;
+  left:50%;
+  transform:
+    rotateX(-90deg)
+    translateX(-50%)
+    translateY(0);
+  opacity:0.5;
+  box-shadow: 0 0 0 0.5px #000;
+  }
+
+.dx {
+  position:absolute;
+  background:grey;
+  top:50%;
+  left: 50%;
+  width:100px;
+  height:100px;
+  transform:
+    rotateX(0deg)
+    rotateY(-90deg)
+    translateX(0%)
+    translateY(-50%)
+    translateZ(0) ;
+    opacity:0.5;
+}
+
+.sx {
+  position:absolute;
+  background:grey;
+  top:50%;
+  right: 50%;
+  width:100px;
+  height:100px;
+  transform:
+    rotateX(0deg)
+    rotateY(-90deg)
+    translateX(0%)
+    translateY(-50%)
+    translateZ(0) ;
+    opacity:0.5;
+}
+
+.front {
+  position:absolute;
+  background: grey;
+  width:100px;
+  height: 100px;
+  top:50%;
+  left:50%;
+  transform:translate3d(-50%, -50%,50px);
+  opacity:0.5;
+}
+
+.back {
+  position:absolute;
+  background: grey;
+  width:100px;
+  height: 100px;
+  top:50%;
+  left:50%;
+  transform:translate3d(-50%, -50%,-50px);
+  opacity:0.5;
+}
+
+.top {
+  position:absolute;
+  background: grey;
+  width:100px;
+  height: 100px;
+  bottom:50%;
+  left:50%;
+  transform:
+    rotateX(-90deg)
+    translateX(-50%)
+    translateY(0);
+  opacity:0.5;
+  }
+
+  .infinityShadow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#0007, #0000 50%);
+  }
+
+/* .turn{
+  animation: e 30s infinite linear;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  width: 100%;
+} */
+
+@keyframes e {
+ to {transform:   rotateY(360deg);}
+}
+
+.infinity{
+  position: absolute;
+  top:20%;
+  width: 90px;
+  z-index:1;
+  animation: suGiu 3s infinite ease-in-out;
+}
+
+@keyframes suGiu {
+  0%{transform: translateY(0px)}
+  50%{transform: translateY(-20px)}
+}
