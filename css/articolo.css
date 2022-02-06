@@ -1,0 +1,458 @@
+
+
+.contenitore_articoli {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-left:min(35px);
+  background-image: url(../images/sfondo3.jpg);
+  background-repeat: round;
+}
+
+.articolo {
+  width: 25%;
+  min-width: 240px;
+  margin-bottom: 50px;
+  position: relative;
+  transform: scale(1);
+  transition: 0.5s;
+  margin-right: min(35px);
+}
+
+.articolo:hover{
+  transform: scale(1.02);
+  transition: 0.5s ease-in-out;
+}
+
+.articolo:hover .mese{
+  color: red;
+}
+
+.articolo:hover .giorno{
+  color: red;
+}
+
+.articoloContenitoreInterno {
+  display: block;
+  justify-content:space-around;
+  position: relative;
+  transform-style: preserve-3d;
+  justify-content: center;
+  /* box-shadow: 0 8px 32px 0 rgba(0,0,0,0.3); */
+  /* border: 1px solid rgba(255,255,255,0.18); */
+  transform-style: preserve-3d;
+}
+
+.articoloContenitoreInterno:hover {
+  box-shadow: 5px 5px 10px 2px #333333;
+}
+
+.guardami:hover .articoloContenitoreInterno {
+  box-shadow: 5px 5px 10px 2px #333333 !important;
+}
+
+.articoloContenitoreInterno:hover .articleImg{
+  transform: scale(1.2);
+}
+
+.articoloContImg {
+  overflow: hidden;
+  line-height:0px;
+}
+
+.articleImg {
+  transform: scale(1);
+  transition: 1s ease-in-out;
+  width: 100%;
+  cursor: pointer;
+}
+
+.data {
+  width: 55px;
+  height: 55px;
+  background: black;
+  position: absolute;
+  right: 0px;
+  top: -10px;
+  z-index: 1;
+  transform: translateZ(30px);
+  margin-top: 1px solid black;
+  cursor:default;
+  user-select: none;
+}
+
+.mese {
+  text-align: center;
+  font-size: 15px;
+  text-align: center;
+  font-weight: normal;
+  color: white;
+}
+
+.giorno {
+  font-size: 30px;
+  color:white;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.interazioneArticolo {
+  box-shadow: 0 50px 80px 0 rgba(0,0,0,0.2);
+  background: red;
+  width: 12%;
+  padding-top: 10px;
+  position: absolute;
+  top:20%;
+
+  right: 0;
+  z-index: 1;
+  transform:  translateX(50%) translateY(0) translateZ(20px);
+
+/* ...... */
+  color:white;
+
+  /* background-color: red; */
+  /* devo impostare il seguente marin-right perchè altrimenti per questa larghezza screen non mi fa centrare */
+
+  border-radius: 20px;
+
+  cursor: pointer;
+  user-select: none;
+  animation: var(--variabile , ei 4s ease-in-out infinite);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 5px 5px 10px 2px #333333; */
+
+
+}
+
+
+.interazioneArticolo:hover {
+  background: black;
+}
+
+
+.articolo:hover .interazioneArticolo{
+  animation: ruota2 5s ease-in-out infinite;
+  box-shadow: 5px 5px 10px 2px #333333;
+}
+
+@keyframes ruota2 {
+  0% {transform:  translateX(50%) translateY(0) translateZ(20px) rotate(1.5deg);}
+  20% {transform: translateX(50%) translateY(0) translateZ(20px) rotate(-1.5deg);}
+  40% {transform:  translateX(50%) translateY(0) translateZ(20px)rotate(1.5deg);}
+  60% {transform:  translateX(50%) translateY(0) translateZ(20px)rotate(-1.5deg);}
+  90% {transform:  translateX(50%) translateY(0) translateZ(20px)rotate(0deg);}
+}
+
+.interazioneArticoloIcona{
+  /* box-shadow: 5px 5px 10px 2px #333333; */
+  border-radius: 50%;
+  margin-bottom: 6px;
+  fill: white;
+
+}
+
+.interazioneArticoloIcona:hover{
+fill:red;
+}
+
+.interazioneArticoloIcona:active{
+  /* animation: r 1s ease-in-out !important; */
+  transform: translateY(4px) !important;
+}
+
+.articolo h2 {
+  position: absolute;
+  top:-10px;
+  height: 55px;
+  width: 75%;
+  text-align: left;
+  font-size: 1em;
+  padding-left: 3px;
+  font-weight:bolder;
+  background: rgba(255,255,255,0.90);
+  color: black;
+  cursor: pointer;
+  user-select: none;
+  transform: translateZ(30px);
+}
+
+.articolo a {
+  text-decoration: none;
+}
+
+.articolo:hover h2 {
+  color:red;
+}
+
+   h2:active a{
+  color:blue;
+}
+
+
+.content {
+  width: 90%;
+  text-align: justify;
+  padding: 3% 3%;
+  font-size: 1em;
+  font-weight: normal;
+  color: black;
+  position: relative;
+  top:-30px;
+  padding-top: 35px;
+  padding-bottom: 25px;
+  transform-style: preserve-3d;
+  transform: translateZ(20px);
+  left:0;
+  border: 1px solid white;
+  text-align: center;
+  box-shadow: 0 50px 80px 0 rgba(0,0,0,0.2);
+  perspective-origin: top;
+  background: rgba(255,255,255,0.70);
+}
+
+.enterArticle {
+  height: 100px;
+  background: green;
+}
+
+.guardami {
+  position: relative;
+  right:50%;
+  margin-top: -50px;
+  height: 40px;
+  color:white;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  width: 169px;
+  transform: translateZ(30px) translateY(-50%);
+  background-color: red;
+  /* devo impostare il seguente marin-right perchè altrimenti per questa larghezza screen non mi fa centrare */
+  line-height: 40px;
+  float: right;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20px;
+  /* top:100px; */
+  cursor: pointer;
+  user-select: none;
+  animation: var(--variabile , ei 4s ease-in-out infinite);
+}
+
+.round{
+  /* border: 2.5px solid white; */
+  fill: white;
+  width:25px;
+  height: 25px;
+}
+
+.round:active {
+  fill:blue;
+}
+
+.space {
+  cursor: copy;
+  background: orange;
+  padding-top: 10px;
+  transform-style: preserve-3d;
+}
+
+.guardami:hover {
+  /* background-color: #262626; */
+  color:white;
+  background: black !important;
+}
+
+
+.guardami:active {
+  /* in pratica sto inserendo una animaizone
+  perchè già in .guardami c'è una animazione.
+  Quindi va in conflitto se qui non metto un'altra
+  che interrompe l'altra. */
+  animation: animazioneInesistente 1s ease-in-out !important;
+/* allora: facendo un po di prove ho visto che
+il transform è agià applicato altrove. In particolare
+c'è un -50% in guardami per allineare alla metà del contattamiContainer(vedi sito).
+quaindi dovendo giocare con le percentuali dopo varie prove
+ho visto che il vaolre -15px dà lo stesso risultato di un click. */
+  transform: translateY(-15px) !important;
+}
+
+
+.articolo:hover .guardami {
+  /* per vedere l'animazione "ruota" vedi il keyframe ruota */
+  animation: ruota 5s ease-in-out infinite;
+  box-shadow: 5px 5px 10px 2px #333333;
+}
+
+.articolo:hover .guardami:after {
+  animation: look 1.1s ease-in-out infinite;
+}
+
+.articolo:active .guardami:after {
+  animation-play-state: paused;
+}
+
+.articolo:active .guardami {
+  animation-play-state: paused;
+}
+
+ .guardami:after {
+  content:" ";
+  /* background: url(svg/arrowCircleRight.svg); */
+  background: url(../svg/arrowCircleRight.svg) no-repeat center center;
+  /* display: block; */
+  width:30px;
+  height: 30px;
+  position: absolute;
+  top: 4px;
+  right:10px;
+  /* a questa animazione abbiamo dato una variabile
+  afterback ....quando quindi la reimposto altrove
+  ecco che viene presa e quinid nonviene eseguita
+  quella che viene definite dopo la virgola. per vedere
+  vai alle classi dove è inserita afterback keyframes */
+  animation: var(--afterBack , ei 1.1s ease-in-out infinite);
+}
+
+
+.nnn{
+  /* questa è richiamata dal js
+  e assegna la classe a guardami. Si riferisce
+  al boxshadow di guardami che compare man mano che si
+  scrolla. AAA nella transition ho rispecificato il
+  box-shadow perchè la transazione in secondi
+  si applicava anche agli altri effetti della clsasse
+  importante di "guardami" come l'hover */
+  box-shadow: 5px 5px 10px 2px #333333;
+  transition: box-shadow 3s ease-in-out;
+}
+
+.ooo {
+  animation: ioo 4s ease-in-out infinite !important;
+}
+
+.ppp {
+  /* qui definisco afterback che viene presa come variabile
+  privilegiata quando appunto è specificata. */
+  --afterBack: kar 1.1s ease-in-out infinite !important;
+}
+
+@keyframes ioo {
+  /* ho inserito anche qui il translate avendolo nel
+  corpo della classe principale */
+  0% {transform: translateY(-50%) rotate(1.5deg);}
+  20% {transform: translateY(-50%)rotate(-1.5deg);}
+  40% {transform: translateY(-50%)rotate(1.5deg);}
+  60% {transform: translateY(-50%)rotate(-1.5deg);}
+  90% {transform: translateY(-50%) rotate(1.5deg);}
+}
+
+@keyframes ruota {
+  /* questo si applica alla rotazione del pulsante
+  "vai all'altricolo". Quindi se ci sono variazioni
+  nel transform:translate allora vanno messe anche
+  qui dentro. */
+  0% {transform: translateY(-50%) rotate(1.5deg);}
+  20% {transform: translateY(-50%) rotate(-1.5deg);}
+  40% {transform: translateY(-50%) rotate(1.5deg);}
+  60% {transform: translateY(-50%) rotate(-1.5deg);}
+  90% {transform: translateY(-50%) rotate(0deg);}
+}
+
+
+@keyframes kar {
+  50% {transform: translateX(-7px);}
+}
+
+@keyframes look {
+  50% {transform: translateX(-7px);}
+}
+
+
+
+
+
+
+
+
+@media (min-width:980px) and (max-width:1230px) {
+
+  .contenitore_articoli {
+    width: 60%;
+    justify-content: space-around;
+  }
+
+  .contattami {
+width:40%;
+  }
+}
+
+@media (min-width:850px) and (max-width:979px) {
+
+  .contenitore_articoli {
+    width: 70%;
+    justify-content: space-around;
+  }
+
+  .contattami {
+width:30%;
+  }
+
+  .testo1Contattati{
+    font-size: 24px;
+  }
+}
+
+@media (min-width:650px) and (max-width:849px) {
+
+  .contenitore_articoli {
+    width: 50%;
+    justify-content: space-around;
+  }
+
+  .contattami {
+width:50%;
+  }
+}
+
+@media (min-width:585px) and (max-width:649px) {
+
+  .contenitore_articoli {
+    width: 100%;
+    justify-content: left;
+  }
+
+  .contattami {
+width:100%;
+  }
+
+  .testo1Contattati {
+  margin-top: 50px;
+  }
+}
+
+@media (min-width:0px) and (max-width:584px) {
+
+  .contenitore_articoli {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contattami {
+width:100%;
+  }
+
+  .testo1Contattati {
+  margin-top: 50px;
+  }
+
+}

@@ -5,18 +5,9 @@
 }
 
 body {
-  /* height: 3500px; */
-  background: rgb(36,120,300);
+  background: white;
   font-family: 'Montserrat', sans-serif;
 }
-
-.icon {
-  transform: scale(5);
-  margin-top: 100px;
-  margin-left: 100px;
-}
-
-
 
 .a {
   display: none;
@@ -109,7 +100,7 @@ li a:hover{
   width: 100%;
   /* max-width: 100%; */
   position: fixed;
-  background: rgb(36,120,300);
+  /* background: rgb(36,120,300); */
 }
 
 .bene {
@@ -143,17 +134,14 @@ li a:hover{
   transform: scale(0.01);
   font-size: 31.5px;
   font-weight: normal;
-  color: white;
+  color: red;
   text-align:right;
   cursor: pointer;
   /* user-select: none; */
-  display: none;
 }
 
 .scrittaHome2{
   font-size: 60px;
-  display: none;
-
 }
 
 .scrittaHome:hover {
@@ -179,7 +167,7 @@ li a:hover{
   width: 100%;
 } */
 
-.textVideo {
+/* .textVideo {
   font-size: 30px;
   border: 1px solid red;
   color: red;
@@ -189,244 +177,35 @@ li a:hover{
   left:50%;
   transform: translate(-50%,-50%);
   cursor: pointer;
-}
+} */
 
 .totale_bianco {
   display: flex;
+  flex-wrap: wrap;
   padding-top: 30px;
   width: 100%;
-  background: rgb(255,237,167) ;
+ /* background: rgb(255,237,167) ; */
   justify-content: space-around;
   z-index: 1;
 }
 
-.contenitore_articoli {
-  left: 2%;
-  width: 70%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.articolo {
-  width: 31%;
-  margin-right: 2%;
-  margin-bottom: 2%;
-  position: relative;
-  transform: scale(1);
-  transition: 0.5s;
-
-}
-
-.articolo:hover{
-  transform: scale(1.02);
-  transition: 0.5s ease-in-out;
-}
-
-.articolo:hover .mese{
-  color: red;
-}
-
-/* .articolo:hover .articleImg{
-  transform: scale(1.2);
-} */
-
-.articoloContenitoreInterno {
-  overflow: hidden;
-  padding-bottom: 15px;
-  display: block;
-  justify-content:space-around;
-}
-
-.articoloContenitoreInterno:hover {
-  box-shadow: 5px 5px 10px 2px #333333;
-  background: white;
-}
-
-.articoloContenitoreInterno:hover .articleImg{
-  transform: scale(1.2);
-}
-
-
-.articoloContImg {
-  overflow: hidden;
-  width: 100%;
-}
-
-.articleImg {
-  transform: scale(1);
-  transition: 1s ease-in-out;
-  width: 100%;
-  cursor: pointer;
-}
-
-.data {
-  width: 25%;
-  /* height: 70px; */
-  background: black;
-  display: block;
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  z-index: 1;
-}
-
-.mese {
-  text-align: center;
-  font-size: 1em;
-  font-weight: lighter;
-  width: 100%;
-  margin-top: 0px;
-  color: white;
-  cursor:default;
-}
-
-.giorno {
-  font-size: 2em;
-}
-
-.articolo h2 {
-  width: 100%;
-  text-align: left;
-  font-size: 2.1vw;
-  font-weight:bolder;
-  padding: 3% 3%;
-  background: white;
-  color: black;
-  cursor: pointer;
-  user-select: none;
-}
-
-.articolo h2:hover {
-  /* text-shadow: 1px 1px  #000000; */
-  color:red;
-  transform: scale(1.02);
-}
-
-.articolo h2:active {
-  /* text-shadow: 1px 1px  #000000; */
-  color:blue;
-}
-
-.articolo a {
-  text-decoration: none;
-}
-
-.content {
-  width: 100%;
-  text-align: justify;
-  padding: 3% 3%;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1em;
-  font-weight: lighter;
-  color: #575352;
-  background: white;
-  margin-bottom: 2%
-}
-
-.guardami {
-  color:white;
-  font-size: 14px;
-  font-weight: bold;
-  text-align: left;
-  width: 169px;
-  right:50%;
-  background-color: black;
-  /* devo impostare il seguente marin-right perchè altrimenti per questa larghezza screen non mi fa centrare */
-  margin-right: -84.5px;
-  height: 40px;
-  line-height: 40px;
-  float: right;
-  padding-left: 5px;
-  padding-right: 10px;
-  position: relative;
-  cursor: pointer;
-  user-select: none;
-  animation: var(--variabile , ei 4s ease-in-out infinite);
-}
-
-.guardami:hover {
-  /* background-color: #262626; */
-  color:red;
-}
-
-
-.guardami:active {
-  /* in pratica sto inserendo una animaizone che non esiste per sovrascriverla a quella precedente altrimenti no mi fa effetto click e translatY */
-  animation: r 1s ease-in-out !important;
-  transform: translateY(4px) !important;
-}
-
-.articolo:hover .guardami {
-  animation: ruota 5s ease-in-out infinite;
-  box-shadow: 5px 5px 10px 2px #333333;
-}
-
-.articolo:hover .guardami:after {
-  animation: look 1.1s ease-in-out infinite;
-}
-
-.articolo:active .guardami:after {
-  animation-play-state: paused;
-}
-
-.articolo:active .guardami {
-  animation-play-state: paused;
-}
-
- .guardami:after {
-  content:" ";
-  background: url(w.svg) no-repeat center center;
-  display: block;
-  width:30px;
-  height: 30px;
-  position: absolute;
-  top: 4px;
-  right:0.2px;
-  animation: var(--afterBack , ei 1.1s ease-in-out infinite);
-}
-
-@keyframes ioo {
-  0% {transform: rotate(1.5deg);}
-  20% {transform: rotate(-1.5deg);}
-  40% {transform: rotate(1.5deg);}
-  60% {transform: rotate(-1.5deg);}
-  90% {transform: rotate(1.5deg);}
-}
-
-@keyframes ruota {
-  0% {transform: rotate(1.5deg);}
-  20% {transform: rotate(-1.5deg);}
-  40% {transform: rotate(1.5deg);}
-  60% {transform: rotate(-1.5deg);}
-  90% {transform: rotate(0deg);}
-}
-
-@keyframes kar {
-  50% {transform: translateX(-7px);}
-}
-
-@keyframes look {
-  50% {transform: translateX(-7px);}
-}
-
-.container2 {
+/* .container2 {
   top: 165px ;
   width: 20%;
   height: 400px;
-}
+} */
 
 .black {
-  background: black;
-  opacity: 1;
+  /* background: black;
+  opacity: 1; */
  /* transition: opacity 0.5s ease-in-out;
  -moz-transition: opacity 0.5s ease-in-out;
  -webkit-transition: opacity 0.5s ease-in-out; */
- transform: scale(1);
- transition: 0.5s;
+ /* transform: scale(1);
+ transition: 0.5s; */
 }
 
-.black:hover{
+/* .black:hover{
   background: linear-gradient(to top right, black 45%, white 100%);
   transform: scale(1.03);
   transition: 0.5s ease-out;
@@ -436,9 +215,9 @@ li a:hover{
 .black:active {
   transform: translateY(4px);
   transition: 0.06s ease-in-out;
-}
+} */
 
-.uno, .due, .tre, .quattro {
+/* .uno, .due, .tre, .quattro {
   width: 100%;
   height:70px;
   margin-bottom: 15px;
@@ -455,16 +234,16 @@ li a:hover{
   -webkit-text-fill-color: transparent;
   transition: 0.5s ease-out;
   z-index: 10;
-}
+} */
 
-.uno, .due {
+/* .uno, .due {
   padding-top: 16px;
   line-height: 20px;
 }
 
 .uno:hover , .due:hover , .tre:hover , .quattro:hover {
 background-position: -100%;
-}
+} */
 
 .goUp {
 z-index: 100;
@@ -971,10 +750,10 @@ html {
     }
 
     nav li a:hover{ border-bottom: 0px; color: #fff;}
-    nav li:first-child a{ border-left: 20px solid #3498db; }
-    nav li:nth-child(2) a{ border-left: 20px solid #ffd071; }
-    nav li:nth-child(3) a{ border-left: 20px solid #f0776c; }
-    nav li:last-child a{ border-left: 20px solid #1abc9c; }
+    nav li:first-child a{ border-left: 20px solid red; }
+    nav li:nth-child(2) a{ border-left: 20px solid red; }
+    nav li:nth-child(3) a{ border-left: 20px solid red; }
+    nav li:last-child a{ border-left: 20px solid red; }
 
     nav li a:after {
       content: "";
@@ -989,10 +768,10 @@ html {
     }
 
     nav li a:hover:after{ width: 100%; }
-    nav li:first-child a:after{ background: #3498db; }
-    nav li:nth-child(2) a:after{ background: #ffd071; }
-    nav li:nth-child(3) a:after{ background: #f0776c; }
-    nav li:last-child a:after{ background: #1abc9c; }
+    nav li:first-child a:after{ background: red; }
+    nav li:nth-child(2) a:after{ background: red; }
+    nav li:nth-child(3) a:after{ background: red; }
+    nav li:last-child a:after{ background: red; }
 
     /* AAA here finish from https://www.proglobalbusinesssolutions.com/css-hover-effects/ ...studyit */
 
@@ -1032,7 +811,7 @@ html {
     line-height: 50px;
     width: 100%;
     padding-bottom: 400px;
-    /* background: red; */
+    background: black;
   }
 
   li {
@@ -1107,36 +886,7 @@ html {
     width:70%;
   }
 
-  .data {
-    width: 70px;;
-    height: 70px;
-    background: black;
-    display: block;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    z-index: 1;
-  }
 
-  .mese {
-    text-align: center;
-    font-size: 15px;
-    padding-top: 6px;
-    text-align: center;
-    font-weight: lighter;
-    width: 70px;
-    height: 70px;
-    margin-top: 0px;
-    color: white;
-    cursor:default;
-    user-select: none;
-  }
-
-  .giorno {
-    font-size: 33px;
-    width: 70px;
-    height: 70px;
-  }
 
   .articolo {
     width: 100%;
@@ -1219,10 +969,10 @@ html {
   }
 
   nav li a:hover{ border-bottom: 0px; color: #fff;}
-  nav li:first-child a{ border-left: 20px solid #3498db; }
-  nav li:nth-child(2) a{ border-left: 20px solid #ffd071; }
-  nav li:nth-child(3) a{ border-left: 20px solid #f0776c; }
-  nav li:last-child a{ border-left: 20px solid #1abc9c; }
+  nav li:first-child a{ border-left: 20px solid red; }
+  nav li:nth-child(2) a{ border-left: 20px solid red; }
+  nav li:nth-child(3) a{ border-left: 20px solid red; }
+  nav li:last-child a{ border-left: 20px solid red; }
 
   nav li a:after {
     content: "";
@@ -1237,10 +987,10 @@ html {
   }
 
   nav li a:hover:after{ width: 100%; }
-  nav li:first-child a:after{ background: #3498db; }
-  nav li:nth-child(2) a:after{ background: #ffd071; }
-  nav li:nth-child(3) a:after{ background: #f0776c; }
-  nav li:last-child a:after{ background: #1abc9c; }
+  nav li:first-child a:after{ background: red; }
+  nav li:nth-child(2) a:after{ background: red; }
+  nav li:nth-child(3) a:after{ background: red; }
+  nav li:last-child a:after{ background: red; }
 
   /* AAA here finish from https://www.proglobalbusinesssolutions.com/css-hover-effects/ ...studyit */
 
@@ -1295,7 +1045,7 @@ html {
     display: block;
     margin-top: 0px;
     padding-top: 100px;
-    background-color: #e74c3c;
+    background-color: black;
     line-height: 50px;
     width:100%;
     padding-bottom: 600px;
@@ -1372,36 +1122,7 @@ html {
     width:80%;
   }
 
-  .data {
-    width: 70px;;
-    height: 70px;
-    background: black;
-    padding-top: 6px;
-    display: block;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    z-index: 1;
   }
-
-  .mese {
-    text-align: center;
-    font-size: 15px;
-    text-align: center;
-    font-weight: lighter;
-    width: 70px;
-    height: 70px;
-    margin-top: 0px;
-    color: white;
-    cursor:default;
-  }
-
-  .giorno {
-    font-size: 33px;
-    width: 70px;
-    height: 70px;
-  }
-
   .articolo {
     width: 100%;
     margin-bottom: 30px;
@@ -1513,17 +1234,4 @@ transition:  1s ease-in-out !important;
 .eee {
   box-shadow: none;
   transition: 1s ease-in-out;
-}
-
-.nnn{
-  box-shadow: 5px 5px 10px 2px #333333;
-  transition: 1s ease-in-out;
-}
-
-.ooo {
-  animation: ioo 4s ease-in-out infinite !important;
-}
-
-.ppp {
-  --afterBack: kar 1.1s ease-in-out infinite !important;
 }
