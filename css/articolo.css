@@ -15,12 +15,12 @@
 
 .articolo {
   width: 25%;
-  min-width: 240px;
+  min-width: 250px;
   margin-bottom: 80px;
   position: relative;
   transform: scale(1);
   transition: 0.5s;
-  margin-right: min(35px);
+  margin-right: min(3%);
 }
 
 .articolo:hover{
@@ -160,8 +160,9 @@ fill:red;
   line-height: 55px; */
   width: 100%;
   text-align: left;
-  font-size: 1em;
-  padding-left: 3px;
+  font-size: 1.5em;
+  padding-left: 6px;
+  padding-right: 6px;
   font-weight:bolder;
   background: rgba(255,255,255,1);
   color: black;
@@ -171,25 +172,28 @@ fill:red;
 
 .articolo a {
   text-decoration: none;
+  color:black;
+  width: 100%;
+
 }
 
-.articolo:hover h2 {
+.articolo:hover h2 a {
   color:red;
 }
 
    h2:active a{
-  color:blue;
+  color:red;
 }
 
 .content {
   width: 100%;
-  text-align: justify;
   padding: 3% 3% 2% 3%;
   font-size: 1em;
   font-weight: normal;
   color: black;
   transform-style: preserve-3d;
-  text-align: center;
+  text-align: left;
+  line-height: 25px;
   perspective-origin: top;
 }
 
@@ -221,13 +225,14 @@ fill:red;
   transform:translateX(-50%);
 }
 
+.guardami a {
+  color:white;
+}
 
-
-.guardami:hover {
-  /* background-color: #262626; */
+/* .guardami:hover {
   color:white;
   background: black !important;
-}
+} */
 
 .guardami:active {
   /* in pratica sto inserendo una animaizone
@@ -240,7 +245,8 @@ il transform è agià applicato altrove. In particolare
 c'è un -50% in guardami per allineare alla metà del contattamiContainer(vedi sito).
 quaindi dovendo giocare con le percentuali dopo varie prove
 ho visto che il vaolre -15px dà lo stesso risultato di un click. */
-  transform: translateX(-50%) translateY(7px) !important;
+  transform: translateX(-50%) translateY(5px) !important;
+  color:red;
 }
 
 
@@ -294,15 +300,7 @@ ho visto che il vaolre -15px dà lo stesso risultato di un click. */
   animation: var(--afterBack , ei 1.1s ease-in-out infinite);
 }
 
-.ppp {
-  /* qui definisco afterback che viene presa come variabile
-  privilegiata quando appunto è specificata. In partciolare
-  dal momento che viene definita, se applico appunto questa clsasse
-  a "guardami:after" evvo che laddove nelle proprietà vi è
-  un afterback allora viene sovrascritto questo. Afterback esegue
-  l'animazione translaPulsante (vedi keyframes)*/
-  --afterBack: translaPulsante 1.1s ease-in-out infinite !important;
-}
+
 
 .nnn{
   /* questa è richiamata dal js
@@ -313,12 +311,12 @@ ho visto che il vaolre -15px dà lo stesso risultato di un click. */
   si applicava anche agli altri effetti della clsasse
   importante di "guardami" come l'hover */
   box-shadow: 5px 5px 10px 2px #333333;
-  transition: box-shadow 3s ease-in-out;
+  transition: box-shadow 1s ease-in-out;
 }
 
 .ooo {
-  background: red;
-  animation: ioo 4s ease-in-out infinite !important;
+  /* background: red; */
+  /* animation: ioo 4s ease-in-out infinite !important; */
 }
 
 
@@ -377,6 +375,16 @@ ho visto che il vaolre -15px dà lo stesso risultato di un click. */
     justify-content: space-around;
   }
 
+  .articolo {
+    width: 25%;
+    min-width: 270px;
+    margin-bottom: 80px;
+    position: relative;
+    transform: scale(1);
+    transition: 0.5s;
+    margin-right: min(10px);
+  }
+
   .contattami {
 width:40%;
   }
@@ -433,6 +441,55 @@ width:100%;
     justify-content: center;
   }
 
+  .articolo {
+    width: 97%;
+  }
+
+  .articolo h2 {
+    font-size: 1.9em;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .articolo h2 a {
+width:100%;  }
+
+  .content {
+    font-size: 1.3em;
+    text-align: left;
+    line-height: 30px;
+    padding-top: 0px;
+  }
+
+  .interazioneArticoloIcona{
+    margin-bottom: 6px;
+    margin-left: 7px;
+    margin-right: 7px;
+    width:45px;
+    height: 45px;
+  }
+
+  .guardami:active {
+    /* in pratica sto inserendo una animaizone
+    perchè già in .guardami c'è una animazione.
+    Quindi va in conflitto se qui non metto un'altra
+    che interrompe l'altra. */
+    animation: eeee 1s;
+  /* allora: facendo un po di prove ho visto che
+  il transform è agià applicato altrove. In particolare
+  c'è un -50% in guardami per allineare alla metà del contattamiContainer(vedi sito).
+  quaindi dovendo giocare con le percentuali dopo varie prove
+  ho visto che il vaolre -15px dà lo stesso risultato di un click. */
+    transform: translateX(-50%) translateY(3px) !important;
+  }
+
+
+  .articolo:hover .guardami {
+    /* per vedere l'animazione "ruota" vedi il keyframe ruota */
+    animation: inesistente 5s ease-in-out infinite;
+    box-shadow: 5px 5px 10px 2px #333333;
+  }
+
   .contattami {
 width:100%;
   }
@@ -440,6 +497,8 @@ width:100%;
   .testo1Contattati {
   margin-top: 50px;
   }
+
+
 }
 
 /* seguono effetti al mese e giorno
@@ -473,4 +532,8 @@ aggiunti tramite JS */
 
 .backgroundRosso{
   background: red;
+}
+
+.backgroundBlack{
+  background: black;
 }
