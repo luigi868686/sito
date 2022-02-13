@@ -29,7 +29,7 @@ function rivela () {
     if  ((altezzaviewport - oggettodd) > altezzaOggetto/1 && (altezzaviewport - oggettodd) <  altezzaOggetto*2 && window.matchMedia("(max-width:480px)").matches)  {
       document.querySelectorAll(".mese")[i].classList.add("coloramiDiRosso");
       document.querySelectorAll(".giorno")[i].classList.add("coloramiDiRosso");
-      document.querySelectorAll(".interazioneArticolo")[i].classList.add("backgroundRosso");
+      // document.querySelectorAll(".interazioneArticolo")[i].classList.add("backgroundBlack");
       document.querySelectorAll(".articleImg")[i].classList.add("ingrandiscimi");
       // document.querySelectorAll(".articolo")[i].classList.add("ccc");
       document.querySelectorAll(".articoloContenitoreInterno")[i].classList.add("effettiVari");
@@ -41,7 +41,7 @@ function rivela () {
     else if (((altezzaviewport - oggettodd) <= altezzaOggetto/1.7 | (altezzaviewport - oggettodd) >= altezzaOggetto*2)  && window.matchMedia("(max-width:480px)").matches) {
       document.querySelectorAll(".mese")[i].classList.remove("coloramiDiRosso");
       document.querySelectorAll(".giorno")[i].classList.remove("coloramiDiRosso");
-      document.querySelectorAll(".interazioneArticolo")[i].classList.remove("backgroundRosso");
+      // document.querySelectorAll(".interazioneArticolo")[i].classList.remove("backgroundBlack");
       document.querySelectorAll(".articleImg")[i].classList.remove("ingrandiscimi");
       // document.querySelectorAll(".articolo")[i].classList.remove("ccc");
       document.querySelectorAll(".articoloContenitoreInterno")[i].classList.remove("effettiVari");
@@ -54,7 +54,7 @@ function rivela () {
     else if (window.innerWidth > 480) {
       document.querySelectorAll(".mese")[i].classList.remove("coloramiDiRosso");
       document.querySelectorAll(".giorno")[i].classList.remove("coloramiDiRosso");
-      document.querySelectorAll(".interazioneArticolo")[i].classList.remove("backgroundRosso");
+      // document.querySelectorAll(".interazioneArticolo")[i].classList.remove("backgroundBlack");
       document.querySelectorAll(".articleImg")[i].classList.remove("ingrandiscimi");
       // document.querySelectorAll(".articolo")[i].classList.remove("ccc");
       document.querySelectorAll(".articoloContenitoreInterno")[i].classList.remove("effettiVari");
