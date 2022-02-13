@@ -1,19 +1,19 @@
 window.addEventListener("load", function(){
-  document.querySelector(".scrittaHome").style.transform="scale(1.1)";
-  document.querySelector(".scrittaHome").style.transition="all 1s";
-  document.querySelector(".scrittaHome").style.transitionDelay="0.7s";
+  // document.querySelector(".scrittaHome").style.transform="scale(1.1)";
+  // document.querySelector(".scrittaHome").style.transition="all 1s";
+  // document.querySelector(".scrittaHome").style.transitionDelay="0.7s";
   document.querySelector(".goUp").style.display = "none";
 });
 
-  document.querySelector(".scrittaHome").addEventListener("mouseover", function(){
-  document.querySelector(".scrittaHome").style.color="red";
-  document.querySelector(".scrittaHome").style.transition="0s";
-  document.querySelector(".scrittaHome").style.transitionDelay="0s";
-});
+//   document.querySelector(".scrittaHome").addEventListener("mouseover", function(){
+//   document.querySelector(".scrittaHome").style.color="red";
+//   document.querySelector(".scrittaHome").style.transition="0s";
+//   document.querySelector(".scrittaHome").style.transitionDelay="0s";
+// });
 
-  document.querySelector(".scrittaHome").addEventListener("mouseout", function(){
-  document.querySelector(".scrittaHome").style.color="white";
-});
+//   document.querySelector(".scrittaHome").addEventListener("mouseout", function(){
+//   document.querySelector(".scrittaHome").style.color="white";
+// });
 
 dd = document.querySelectorAll(".articolo");
 

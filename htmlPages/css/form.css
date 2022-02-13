@@ -1,0 +1,88 @@
+
+
+.contattami {
+display: flex;
+flex-wrap: wrap;
+width: 30%;
+/* height: 350px; */
+/* background:rgb(245,144,145); */
+background: black;
+justify-content: center;
+align-content: flex-start;
+
+}
+
+.testo1Contattati {
+font-size: 30px;
+width: 100%;
+text-align: center;
+color: white;
+margin-top: 150px;
+position: sticky;
+top:150px;
+/* shorthand padding: il primo è
+per top e bottom, il secondo
+è per left and right */
+ padding: 0px 20px;
+}
+
+
+.emailSection{
+  width: 90%;
+  margin-top: 50px;
+  height: 230px;
+  background: red;
+  box-shadow: 5px 5px 10px 2px #333333;
+  position: sticky;
+  top:300px;
+}
+
+.emailIcon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%;
+}
+
+.mailContainer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.mailDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.testoInserisci {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color:white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.emailUser {
+  border: none;
+  height: 40px;
+  width: 200px;
+}
+
+
+.emailSubmit {
+font-size: 20px;
+font-weight: bold;
+background: #ffd000;
+color: black;
+border:none;
+width: 60px;
+line-height: 40px;
+text-align: center;
+}
+
+
+/* aaa per vedere le query vai ad articolo */
