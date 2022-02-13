@@ -21,6 +21,7 @@
   transform: scale(1);
   transition: 0.5s;
   margin-right: min(3%);
+
 }
 
 .articolo:hover{
@@ -439,11 +440,33 @@ width:100%;
   .contenitore_articoli {
     width: 100%;
     justify-content: center;
+
+
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-left:min(3%);
+    background-image: url(../images/sfondo3.jpg);
+    background-repeat: round;
+
+
+
   }
 
+
+
   .articolo {
-    width: 97%;
+    width: 100%;
+    min-width: 100px;
+    margin-bottom: 80px;
+    position: relative;
+    margin-right: none;
   }
+
+
 
   .articolo h2 {
     font-size: 1.9em;
@@ -460,6 +483,8 @@ width:100%;  }
     line-height: 30px;
     padding-top: 0px;
   }
+
+
 
   .interazioneArticoloIcona{
     margin-bottom: 6px;
