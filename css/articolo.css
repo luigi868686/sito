@@ -58,6 +58,7 @@
 
 .articoloContenitoreInterno:hover .articleImg{
   transform: scale(1.2);
+  transfrm-origin:50% 0%;
 }
 
 .articoloContImg {
