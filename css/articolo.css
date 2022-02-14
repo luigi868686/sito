@@ -487,6 +487,28 @@ width:100%;  }
     padding-top: 0px;
   }
 
+  .guardami {
+  position: relative;
+  height: 40px;
+  color:white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  width: 175px;
+  background-color: black;
+  /* devo impostare il seguente marin-right perchè altrimenti per questa larghezza screen non mi fa centrare */
+  line-height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  user-select: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* transform: translateZ(20px) ; */
+  margin-top: 0px;
+  z-index: 1;
+  left:50%;
+  transform:translateX(-50%);
+}
 
 
   .interazioneArticoloIcona{
@@ -508,7 +530,7 @@ width:100%;  }
   c'è un -50% in guardami per allineare alla metà del contattamiContainer(vedi sito).
   quaindi dovendo giocare con le percentuali dopo varie prove
   ho visto che il vaolre -15px dà lo stesso risultato di un click. */
-    transform: translateX(-50%) translateY(3px) !important;
+   /* transform: translateX(-50%) translateY(3px) !important; *
   }
 
 
