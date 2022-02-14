@@ -310,9 +310,9 @@ ho visto che il vaolre -15px dà lo stesso risultato di un click. */
   scrolla. AAA nella transition ho rispecificato il
   box-shadow perchè la transazione in secondi
   si applicava anche agli altri effetti della clsasse
-  importante di "guardami" come l'hover */
+  importante di "guardami" come l'hover 
   box-shadow: 5px 5px 10px 2px #333333;
-  transition: box-shadow 1s ease-in-out;
+  transition: box-shadow 1s ease-in-out;*/
 }
 
 .ooo {
