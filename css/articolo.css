@@ -459,7 +459,7 @@ width:100%;
 
 
   .articolo {
-    width: 80%;
+    width: 85%;
     min-width: 100px;
     margin-bottom: 80px;
     position: relative;
@@ -481,7 +481,7 @@ width:100%;
 width:100%;  }
 
   .content {
-    font-size: 1.3em;
+    font-size: 1.1em;
     text-align: left;
     line-height: 30px;
     padding-top: 0px;
