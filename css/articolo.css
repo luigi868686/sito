@@ -453,11 +453,12 @@ width:100%;
     display: flex;
     flex-wrap: wrap;
     justify-content:center;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     padding-top: 50px;
     padding-left:min(0px);
     background-image: none;
     background-repeat: none;
+    background: white;
   }
 
 
@@ -466,7 +467,7 @@ width:100%;
   .articolo {
     width: 90%;
     min-width: 250px;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
     position: relative;
     transform: scale(1);
     transition: 0.5s;
@@ -628,10 +629,10 @@ top:0;
   }
 
   .articolo h2 {
-    font-size: 1.8em;
+    font-size: 1.5em;
     padding-left: 6px;
-    padding-right: 6px;
-    width: 85%;
+    width: 100%;
+    padding-right: 72px;
   }
 
   .articolo h2 a {
