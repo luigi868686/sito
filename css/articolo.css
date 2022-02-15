@@ -692,7 +692,7 @@ width:100%;
 /* seguono effetti al mese e giorno
 aggiunti tramite JS */
 .coloramiDiRosso {
-  color:red;
+  color:rgb(186, 25, 13);
 }
 
 /* seguono effetti al articleImg
@@ -720,7 +720,7 @@ aggiunti tramite JS */
 }
 
 .backgroundRosso{
-  background: red;
+  background: rgb(186, 25, 13);
 }
 
 .backgroundBlack{
