@@ -11,28 +11,32 @@
   padding-left:20px;
   padding-right:20px;
   /* padding-left:min(35px); */
-  /* background:PINK; */
+  background:rgb(242, 238, 237);
 }
 
 #ileopsoas{
-  height: 30px;
-  margin-bottom: 30px;
+
 }
 
 h2 {
-  color: red;
+  color: rgb(186, 25, 13);
+  background: lightblue;
 }
 
 .titoloArticolo {
-  color:red;
+  color:rgb(186, 25, 13);
   padding-top: 30px;
   width:100%;
 }
 .indice{
   margin-top: 30px;
   width:100%;
-  margin-left: 30px;
+  margin-left: 0;
+  padding-left: 5px;
   color:black;
+  /* list-style-position: inside; */
+  counter-reset: li;
+  background: white;
 }
 
 .indice li {
@@ -40,29 +44,87 @@ h2 {
   text-align: left;
   text-shadow: none;
   color:black;
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  /* line-height: 35px; */
+  counter-increment: li;
+  padding-top: 7px;
+}
+
+li::before {
+  content: counter(li) ".";
+  text-align: left;
+  font-weight: bold;
+
 }
 
 .indice a {
   color:black;
   font-weight: bold;
+  font-size: 20px;
 }
 
 .tornaIndice{
   width: 100%;
   text-align: left;
   font-size: 15px;
+  padding-left: 5px;
 }
+
+.para {
+  background: white;
+  margin-top: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
 
 .widthText{
   width: 100%;
   margin-top: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
   line-height: 30px;
+  background: white;
 }
 
+.tip{
+  background: rgb(250, 250, 110);
+  border:2px solid black;
+  width: 90%;
+  position:relative;
+}
+
+span {
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.light{
+  border:2px solid black;
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* il margin-left è solo 5 erchè già
+  ci sono altri 5 di padding del contenitore in cui è
+  inserita il light */
+  margin-left: 5px;
+  display: block;
+}
+
+
+
 .img_1 {
-  width: 200px;
-  height: 200px;
-  border: 2px solid black;
+  width: 350px;
+  /* height: 200px; */
+  border: 1px solid black;
   background: green;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -72,18 +134,19 @@ h2 {
 }
 
 .img_2 {
-  width: 100%;
-  height: 200px;
-  border: 2px solid black;
+  width: 98%;
+  border: 1px solid black;
   background: green;
   margin-top: 30px;
   margin-bottom: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .img_3 {
   width: 100%;
-  height: 200px;
-  border: 2px solid black;
+  border: 1px solid black;
   background: green;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -96,8 +159,7 @@ h2 {
 
 .img_4 {
   width: 200px;
-  height: 200px;
-  border: 2px solid black;
+  border: 1px solid black;
   background: green;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -108,13 +170,12 @@ h2 {
 
 .aaa{
 margin-top: 30px;
- background: lightblue;
+
 }
 
 .img_5 {
   width: 200px;
-  height: 200px;
-  border: 2px solid black;
+  border: 1px solid black;
   background: green;
   float: left;
   margin-right: 10px;
@@ -122,19 +183,20 @@ margin-top: 30px;
 
 .img_6 {
   width: 200px;
-  height: 200px;
-  border: 2px solid black;
+  border: 1px solid black;
   background: green;
   float: right;
 }
 
 .img_7 {
-  width: 100%;
-  height: 2000px;
-  border: 2px solid black;
+  width: 98%;
+  border: 1px solid black;
   background: green;
   margin-top: 30px;
   margin-bottom: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .space {
@@ -146,11 +208,11 @@ margin-top: 30px;
 }
 
 .articolo:hover .mese{
-  color: red;
+  color: rgb(186, 25, 13);
 }
 
 .articolo:hover .giorno{
-  color: red;
+  color: rgb(186, 25, 13);
 }
 
 .articoloContenitoreInterno {
@@ -259,7 +321,7 @@ margin-top: 30px;
 }
 
 .interazioneArticoloIcona:hover{
-fill:red;
+fill:rgb(186, 25, 13);
 }
 
 .interazioneArticoloIcona:active{
@@ -291,7 +353,7 @@ fill:red;
 }
 
 .articolo:hover h2 {
-  color:red;
+  color:rgb(186, 25, 13);
 }
 
    h2:active a{
@@ -434,7 +496,7 @@ ho visto che il vaolre -15px dà lo stesso risultato di un click. */
 }
 
 .ooo {
-  background: red;
+  background: rgb(186, 25, 13);
   animation: ioo 4s ease-in-out infinite !important;
 }
 
@@ -569,7 +631,7 @@ width:100%;
 /* seguono effetti al mese e giorno
 aggiunti tramite JS */
 .coloramiDiRosso {
-  color:red;
+  color:rgb(186, 25, 13);
 }
 
 /* seguono effetti al articleImg
@@ -596,5 +658,5 @@ aggiunti tramite JS */
 }
 
 .backgroundRosso{
-  background: red;
+  background: rgb(186, 25, 13);
 }

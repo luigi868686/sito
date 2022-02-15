@@ -491,6 +491,7 @@ html {
 @media (min-width:425px) and (max-width:480px) {
 
   /* AAA here start from https://www.proglobalbusinesssolutions.com/css-hover-effects/ ...studyit */
+
     nav{
       float: none;
       clear: both;
@@ -553,7 +554,7 @@ html {
     /* AAA here finish from https://www.proglobalbusinesssolutions.com/css-hover-effects/ ...studyit */
 
   #naviga {
-    height: 80px;
+    height: 70px;
   }
 
   #logo {
@@ -704,7 +705,7 @@ html {
 
   /* AAA here finish from https://www.proglobalbusinesssolutions.com/css-hover-effects/ ...studyit */
   #naviga {
-    height: 80px;
+    height: 70px;
   }
 
   #logo {
@@ -734,7 +735,7 @@ html {
     width:100%;
     right: 0px;
     box-shadow: 5px 5px 10px 2px #333333;
-    height: 80px;
+    height: 70px;
  }
 
   #menu {
