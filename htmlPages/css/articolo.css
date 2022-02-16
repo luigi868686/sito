@@ -18,21 +18,33 @@
 
 }
 
-h2 {
-  color: rgb(186, 25, 13);
-  background: lightblue;
+.borderRed {
+  border: 1px solid rgb(186, 25, 13);
 }
 
 .titoloArticolo {
   color:rgb(186, 25, 13);
   padding-top: 30px;
+  padding-bottom: 10px;
   width:100%;
+  background: white;
+}
+
+.articleDate {
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  background: white;
+  font-size: 15px;
+  color: grey;
 }
 .indice{
   margin-top: 30px;
   width:100%;
   margin-left: 0;
   padding-left: 5px;
+  padding-bottom: 7px;
   color:black;
   /* list-style-position: inside; */
   counter-reset: li;
@@ -71,6 +83,9 @@ li::before {
   padding-left: 5px;
 }
 
+
+
+
 .para {
   background: white;
   margin-top: 35px;
@@ -79,6 +94,9 @@ li::before {
   justify-content: center;
 }
 
+h2 {
+  color: rgb(186, 25, 13);
+}
 
 
 .widthText{
@@ -127,7 +145,7 @@ span {
   border: 1px solid black;
   background: green;
   margin-top: 30px;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   display: block;
   margin-left: auto;
   margin-right: auto;
