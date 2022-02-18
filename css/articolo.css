@@ -23,6 +23,8 @@
   transform: scale(1);
   transition: 0.5s;
   margin-right: min(35px);
+  perspective: 1000px;
+  perspective-origin: top;
 }
 
 .articolo:hover{
@@ -62,17 +64,30 @@
   transform-origin: top;
 }
 
+.articleImg2{
+  display:none;
+}
+
+.articoloContenitoreInterno:hover .articleImg2{
+  transform: scale(1.2);
+  transform-origin: top;
+}
+
+
 .articoloContImg {
   overflow: hidden;
   line-height:0px;
+  position: relative;
 }
 
-.articleImg {
+.articleImg, .articleImg2 {
   transform: scale(1);
   transition: 1s ease-in-out;
   width: 100%;
   cursor: pointer;
 }
+
+
 
 .data {
   width: 55px;
@@ -485,34 +500,54 @@ width:100%;
     box-shadow: none;
   }
 
+
+  .speriamo{
+    position: relative;
+    display: flex;
+    flex-flow: row-reverse;
+  }
+
   .articoloContImg {
+    width: 100%;
     position: relative;
     overflow: hidden;
     line-height:0px;
   }
 
 
+  .articleImg{
+    display:none;
+  }
+
+.articleImg2{
+  display:flex;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/addominale.jpg");
+  background-size: cover;
+  background-position:  top center;
+}
+
+
+
   .primo{
-    position: absolute;
+    width: 70px;
     z-index: 100;
     right: 0;
     top: 0;
     background: pink;
-    display: block;
-    height: ;
 
   }
 
 
 
   .data {
-    width: 70px;
-    height: 70px;
+    width: 100%;
+    height: 35%;
     background: black;
     display: block;
     flex-wrap: wrap;
     align-items: center;
-
     transform: translateZ(0);
     /* margin-top: 1px solid black; */
     cursor:default;
@@ -555,16 +590,17 @@ width:100%;
 
   .divIcone{
     width: 70px;
-    height: 100%;
+    height: 65%;
     color:white;
     cursor: pointer;
     user-select: none;
     display: block;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-items: center;
     justify-content: center;
     align-content: center;
     background: rgb(186, 25, 13);
+    padding-bottom: 5px;
   }
 
 
@@ -615,6 +651,7 @@ width:100%;
 
 .sfondoLeggiArticolo{
 background: rgb(186, 25, 13);
+background: black;
 position: absolute;
 height: 100%;
 width: 70px;
@@ -702,11 +739,7 @@ aggiunti tramite JS */
 
 /* seguono effetti al articleImg
 aggiunti tramite JS */
-.ingrandiscimi {
-transform:  scale(1.2)!important;
-transition:  1s ease-in-out !important;
-transform-origin: top;
-}
+
 
 /* seguono effetti al articoloContenitoreInterno
 aggiunti tramite JS */
@@ -730,4 +763,10 @@ aggiunti tramite JS */
 
 .backgroundBlack{
   background: black;
+}
+
+.ingrandiscimi {
+transform:  scale(1.2)!important;
+transition:  1s ease-in-out !important;
+transform-origin: top;
 }

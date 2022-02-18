@@ -9,6 +9,8 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+
+/* un indizio??????? */
 .a {
   display: none;
 }
@@ -65,14 +67,17 @@ cursor:pointer;
   list-style: none;
   display: flex;
   text-decoration: none;
-z-index: 99}
+  z-index: 99}
 
+/* sotto il "li" è riferito al menu! */
 li {
   margin-right: 15px;
   width: 90px;
   text-align: center;
   text-shadow: 2px 2px 4px #000000;
 }
+
+/* sotto il "li a" è riferito al menu! */
 
 li a {
   text-decoration: none;
@@ -93,6 +98,7 @@ li a:hover{
   overflow: hidden;
   top:0;
   z-index: -1;
+  background: pink;
 }
 
 .imaginehome {
@@ -134,7 +140,6 @@ li a:hover{
   color: red;
   text-align:right;
   cursor: pointer;
-  /* user-select: none; */
 }
 
 .scrittaHome2{
@@ -248,7 +253,7 @@ border-radius: 50%;
 position: sticky;
 left: 90%;
 top:90%;
-box-shadow: 5px 5px 10px 2px #333333;
+/* box-shadow: 5px 5px 10px 2px #333333; */
 /* il display è none perchè viene cambiato da JS */
 }
 
@@ -811,7 +816,14 @@ html {
   }
 
   .goUp {
-  transform: scale(2);
+  transform: scale(1);
+  left: 89%;
+  top:90%;
+  /* il display è none perchè viene cambiato da JS */
+  }
+
+  .goUp:active {
+  transform: scale(1);
   left: 89%;
   top:90%;
   /* il display è none perchè viene cambiato da JS */
