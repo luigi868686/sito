@@ -31,6 +31,8 @@ function rivela () {
       document.querySelectorAll(".giorno")[i].classList.add("coloramiDiRosso");
       // document.querySelectorAll(".interazioneArticolo")[i].classList.add("backgroundBlack");
       document.querySelectorAll(".articleImg")[i].classList.add("ingrandiscimi");
+      document.querySelectorAll(".articleImg2")[i].classList.add("ingrandiscimi");
+
       // document.querySelectorAll(".articolo")[i].classList.add("ccc");
       document.querySelectorAll(".articoloContenitoreInterno")[i].classList.add("effettiVari");
       document.querySelectorAll('.guardami')[i].classList.add("nnn");
@@ -43,6 +45,13 @@ function rivela () {
       document.querySelectorAll(".giorno")[i].classList.remove("coloramiDiRosso");
       // document.querySelectorAll(".interazioneArticolo")[i].classList.remove("backgroundBlack");
       document.querySelectorAll(".articleImg")[i].classList.remove("ingrandiscimi");
+      document.querySelectorAll(".articleImg2")[i].classList.remove("ingrandiscimi");
+
+      // if (document.querySelectorAll(".articleImg2")[i].classList.contains("ingrandiscimi")) {
+      //
+      //   document.querySelectorAll(".articleImg2")[i].classList.remove("ingrandiscimi");
+      // }
+
       // document.querySelectorAll(".articolo")[i].classList.remove("ccc");
       document.querySelectorAll(".articoloContenitoreInterno")[i].classList.remove("effettiVari");
       document.querySelectorAll(".articoloContenitoreInterno")[i].classList.add("effettiVari2");
@@ -56,6 +65,8 @@ function rivela () {
       document.querySelectorAll(".giorno")[i].classList.remove("coloramiDiRosso");
       // document.querySelectorAll(".interazioneArticolo")[i].classList.remove("backgroundBlack");
       document.querySelectorAll(".articleImg")[i].classList.remove("ingrandiscimi");
+      document.querySelectorAll(".articleImg2")[i].classList.remove("ingrandiscimi");
+
       // document.querySelectorAll(".articolo")[i].classList.remove("ccc");
       document.querySelectorAll(".articoloContenitoreInterno")[i].classList.remove("effettiVari");
       document.querySelectorAll(".articoloContenitoreInterno")[i].classList.remove("effettiVari2");
@@ -128,9 +139,9 @@ function close () {
 
 window.addEventListener("scroll",function() {
   y=window.scrollY
-  console.log(y)
+  // console.log(y)
   innerH = window.innerHeight;
-  console.log(innerH);
+  // console.log(innerH);
   if (y<=innerH-240) {
     document.querySelector(".goUp").style.display = "none";
   }
