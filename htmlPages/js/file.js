@@ -17,56 +17,6 @@ window.addEventListener("load", function(){
 
 dd = document.querySelectorAll(".articolo");
 
-window.addEventListener("scroll", rivela)
-
-function rivela () {
-  iterationElement = document.querySelectorAll(".articolo");
-  for (var i=0; i<iterationElement.length; i++) {
-    oggettodd = dd[i].getBoundingClientRect().y;
-    altezzaviewport = window.innerHeight;
-    altezzaOggetto =dd[i].getBoundingClientRect().height;
-
-    if  ((altezzaviewport - oggettodd) > altezzaOggetto/1 && (altezzaviewport - oggettodd) <  altezzaOggetto*2 && window.matchMedia("(max-width:480px)").matches)  {
-      document.querySelectorAll(".mese")[i].classList.add("coloramiDiRosso");
-      document.querySelectorAll(".giorno")[i].classList.add("coloramiDiRosso");
-      document.querySelectorAll(".interazioneArticolo")[i].classList.add("backgroundRosso");
-      document.querySelectorAll(".articleImg")[i].classList.add("ingrandiscimi");
-      // document.querySelectorAll(".articolo")[i].classList.add("ccc");
-      document.querySelectorAll(".articoloContenitoreInterno")[i].classList.add("effettiVari");
-      document.querySelectorAll('.guardami')[i].classList.add("nnn");
-      document.querySelectorAll('.guardami')[i].classList.add("ooo");
-      document.querySelectorAll('.guardami')[i].classList.add("ppp");
-    }
-
-    else if (((altezzaviewport - oggettodd) <= altezzaOggetto/1.7 | (altezzaviewport - oggettodd) >= altezzaOggetto*2)  && window.matchMedia("(max-width:480px)").matches) {
-      document.querySelectorAll(".mese")[i].classList.remove("coloramiDiRosso");
-      document.querySelectorAll(".giorno")[i].classList.remove("coloramiDiRosso");
-      document.querySelectorAll(".interazioneArticolo")[i].classList.remove("backgroundRosso");
-      document.querySelectorAll(".articleImg")[i].classList.remove("ingrandiscimi");
-      // document.querySelectorAll(".articolo")[i].classList.remove("ccc");
-      document.querySelectorAll(".articoloContenitoreInterno")[i].classList.remove("effettiVari");
-      document.querySelectorAll(".articoloContenitoreInterno")[i].classList.add("effettiVari2");
-      document.querySelectorAll('.guardami')[i].classList.remove("nnn");
-      document.querySelectorAll('.guardami')[i].classList.remove("ooo");
-      document.querySelectorAll('.guardami')[i].classList.remove("ppp");
-    }
-
-    else if (window.innerWidth > 480) {
-      document.querySelectorAll(".mese")[i].classList.remove("coloramiDiRosso");
-      document.querySelectorAll(".giorno")[i].classList.remove("coloramiDiRosso");
-      document.querySelectorAll(".interazioneArticolo")[i].classList.remove("backgroundRosso");
-      document.querySelectorAll(".articleImg")[i].classList.remove("ingrandiscimi");
-      // document.querySelectorAll(".articolo")[i].classList.remove("ccc");
-      document.querySelectorAll(".articoloContenitoreInterno")[i].classList.remove("effettiVari");
-      document.querySelectorAll(".articoloContenitoreInterno")[i].classList.remove("effettiVari2");
-      document.querySelectorAll('.guardami')[i].classList.remove("ooo");
-      document.querySelectorAll('.guardami')[i].classList.remove("ppp");
-      document.querySelectorAll('.guardami')[i].classList.remove("ppp");
-    }
-  };
-}
-
-
 
 
 window.addEventListener("DOMContentLoaded",function() {
@@ -128,9 +78,7 @@ function close () {
 
 window.addEventListener("scroll",function() {
   y=window.scrollY
-  console.log(y)
   innerH = window.innerHeight;
-  console.log(innerH);
   if (y<=innerH-240) {
     document.querySelector(".goUp").style.display = "none";
   }
@@ -143,6 +91,10 @@ document.querySelector(".goUp").addEventListener("click", function() {
   window.scrollTo(0, 0)
 });
 
+
+document.querySelector(".hidden").addEventListener("click",function(){
+  this.classList.toggle("active");
+})
 
 
 // document.querySelector(".contattami").addEventListener("submit", submitForm);

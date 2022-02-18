@@ -134,6 +134,7 @@ span {
   ci sono altri 5 di padding del contenitore in cui è
   inserita il light */
   margin-left: 5px;
+  margin-right: 10px;
   display: block;
 }
 
@@ -644,6 +645,57 @@ width:100%;
   .testo1Contattati {
   margin-top: 50px;
   }
+
+.labelCuriosita {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left:
+}
+
+
+
+.labelCuriosita:after {
+ content:" ";
+ background: url(../../svg/frecciaGiu.svg) no-repeat center center;
+/* aaa nell'after ci vuole per forza una grandezza se imposti il bacground senza content */
+ width:30px;
+ height: 30px;
+ position: absolute;
+ top: 50%;
+ transform: translateY(-50%);
+ right:10px;
+ z-index: 100000;
+}
+
+
+.contentHidden {
+  overflow: hidden;
+  transition: 0.5s;
+  height: 0;
+  overflow-y: auto;
+}
+
+.hidden.active .contentHidden{
+  height:100%;
+}
+
+
+.hidden.active .labelCuriosita:after{
+  content:" ";
+  background: url(../../svg/frecciaSu.svg) no-repeat center center;
+ /* aaa nell'after ci vuole per forza una grandezza se imposti il bacground senza content */
+  width:30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right:10px;
+  z-index: 100000;
+}
+
+
+
 }
 
 /* seguono effetti al mese e giorno

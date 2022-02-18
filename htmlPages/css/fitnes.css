@@ -217,7 +217,7 @@ z-index: 1000;
 }
 
 .goUp:active {
-  transform: scale(3) translateY(4px);
+  transform: scale(3) translateY(2px);
 }
 
 html {
@@ -635,11 +635,28 @@ html {
     margin-top: 200px;
     }
 
+
   .goUp {
   transform: scale(2);
-  left: 89%;
+  border-radius: 50%;
+  position: sticky;
+  left: 85%;
   top:90%;
+  box-shadow: none;
+  z-index: 1000;
+  border: .5px solid white;
   /* il display è none perchè viene cambiato da JS */
+  fill:white;
+
+  }
+
+  .innerUp {
+    fill:rgb(186, 25, 13);
+  }
+
+  .goUp:active {
+    transform: scale(2);
+
   }
 }
 /* ultimo media a 400 */
@@ -748,10 +765,5 @@ html {
     padding-bottom: 600px;
   }
 
-  .goUp {
-  transform: scale(2);
-  left: 89%;
-  top:90%;
-  /* il display è none perchè viene cambiato da JS */
-  }
+
 }
