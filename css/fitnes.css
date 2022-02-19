@@ -150,101 +150,6 @@ li a:hover{
   color:red;
 }
 
-/* .contenitoreVideo{
-  z-index: 1;
-  max-width: 100%;
-  max-height: 50%;
-  overflow: hidden;
-  position: static;
-  margin-top: 10%;
-  background: white;
-} */
-/*
-.video{
-  width: 100%;
-  margin-top: -27%;
-}
-
-.vid {
-  width: 100%;
-} */
-
-/* .textVideo {
-  font-size: 30px;
-  border: 1px solid red;
-  color: red;
-  padding: 1%;
-  font-weight: lighter;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-  cursor: pointer;
-} */
-
-.totale_bianco {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 30px;
-  width: 100%;
-  justify-content: space-around;
-  z-index: 1;
-}
-
-/* .container2 {
-  top: 165px ;
-  width: 20%;
-  height: 400px;
-} */
-
-.black {
-  /* background: black;
-  opacity: 1; */
- /* transition: opacity 0.5s ease-in-out;
- -moz-transition: opacity 0.5s ease-in-out;
- -webkit-transition: opacity 0.5s ease-in-out; */
- /* transform: scale(1);
- transition: 0.5s; */
-}
-
-/* .black:hover{
-  background: linear-gradient(to top right, black 45%, white 100%);
-  transform: scale(1.03);
-  transition: 0.5s ease-out;
-  opacity: 1;
-}
-
-.black:active {
-  transform: translateY(4px);
-  transition: 0.06s ease-in-out;
-} */
-
-/* .uno, .due, .tre, .quattro {
-  width: 100%;
-  height:70px;
-  margin-bottom: 15px;
-  color: white;
-  font-weight: bolder;
-  font-size: 1.7vw;
-  text-align: center;
-  line-height: 70px;
-  box-shadow: 5px 5px 10px 2px #333333;
-  cursor: pointer;
-  background: linear-gradient(to right,white 50%, red 50%, red);
-  background-size: 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: 0.5s ease-out;
-  z-index: 10;
-} */
-
-/* .uno, .due {
-  padding-top: 16px;
-  line-height: 20px;
-}
-
-.uno:hover , .due:hover , .tre:hover , .quattro:hover {
-background-position: -100%;
-} */
 
 .goUp {
 z-index: 100;
@@ -264,13 +169,7 @@ top:90%;
 html {
   scroll-behavior: smooth;
 }
-/*
-.contattamiContainer{
-  width: 100%;
-  height: 400px;
-  background: green;
-  display: flex;
-} */
+
 
 
 /* è solo per .guardami */
