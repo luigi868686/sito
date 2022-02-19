@@ -14,10 +14,10 @@ body {
 }
 
 .close {
-position: absolute;
-right: 30px;
-transform: scale(2.7);
-cursor:pointer;
+  position: absolute;
+  right: 30px;
+  transform: scale(2.7);
+  cursor:pointer;
 }
 
 .openMenu {
@@ -65,7 +65,8 @@ cursor:pointer;
   list-style: none;
   display: flex;
   text-decoration: none;
-z-index: 99}
+  z-index: 99;
+}
 
 li {
   margin-right: 15px;
@@ -118,7 +119,6 @@ li a:hover{
   margin-left: 50px;
 }
 
-
 .bene4 {
   margin-top: 100px;
   margin-left: 50px;
@@ -134,112 +134,37 @@ li a:hover{
   color: red;
   text-align:right;
   cursor: pointer;
-  /* user-select: none; */
 }
 
-
-
-.totale_bianco {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 30px;
-  width: 100%;
-  justify-content: space-between;
-  z-index: 1;
-}
-
-/* .container2 {
-  top: 165px ;
-  width: 20%;
-  height: 400px;
-} */
-
-.black {
-  /* background: black;
-  opacity: 1; */
- /* transition: opacity 0.5s ease-in-out;
- -moz-transition: opacity 0.5s ease-in-out;
- -webkit-transition: opacity 0.5s ease-in-out; */
- /* transform: scale(1);
- transition: 0.5s; */
-}
-
-/* .black:hover{
-  background: linear-gradient(to top right, black 45%, white 100%);
-  transform: scale(1.03);
-  transition: 0.5s ease-out;
-  opacity: 1;
-}
-
-.black:active {
-  transform: translateY(4px);
-  transition: 0.06s ease-in-out;
-} */
-
-/* .uno, .due, .tre, .quattro {
-  width: 100%;
-  height:70px;
-  margin-bottom: 15px;
-  color: white;
-  font-weight: bolder;
-  font-size: 1.7vw;
-  text-align: center;
-  line-height: 70px;
-  box-shadow: 5px 5px 10px 2px #333333;
-  cursor: pointer;
-  background: linear-gradient(to right,white 50%, red 50%, red);
-  background-size: 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: 0.5s ease-out;
-  z-index: 10;
-} */
-
-/* .uno, .due {
-  padding-top: 16px;
-  line-height: 20px;
-}
-
-.uno:hover , .due:hover , .tre:hover , .quattro:hover {
-background-position: -100%;
-} */
 
 .goUp {
-z-index: 100;
-transform: scale(3);
+transform: scale(2);
 border-radius: 50%;
 position: sticky;
-left: 90%;
+/* right: 400px; */
 top:90%;
-box-shadow: 5px 5px 10px 2px #333333;
+left:90%;
+box-shadow: none;
 z-index: 1000;
+border: .5px solid white;
 /* il display è none perchè viene cambiato da JS */
+fill:white;
+}
+
+.innerUp {
+  fill:rgb(186, 25, 13);
 }
 
 .goUp:active {
-  transform: scale(3) translateY(2px);
+  transform: scale(2);
 }
 
 html {
   scroll-behavior: smooth;
 }
-/*
-.contattamiContainer{
-  width: 100%;
-  height: 400px;
-  background: green;
-  display: flex;
-} */
-
 
 /* è solo per .guardami */
-@media (min-width:830px) and (max-width:1028px) {
-  #naviga {
-    height: 80px;
-  }
-}
-
-@media (min-width:768px) and (max-width:829px) {
+@media (min-width:768px) and (max-width:1028px) {
   #naviga {
     height: 80px;
   }
@@ -338,11 +263,9 @@ html {
   }
 }
 
-/* è solo per .guardami */
 @media (min-width:545px) and (max-width:625px) {
     #naviga {
       height: 80px;
-      /* z-index: 1; */
     }
 
     .menuContainer {
@@ -357,7 +280,6 @@ html {
       display: block;
       margin-top: 0px;
       padding-top: 350px;
-      /* background-color: black; */
       line-height: 50px;
     }
 
@@ -396,7 +318,6 @@ html {
   }
 }
 
-  /* è solo per .guardami */
 @media (min-width:481px) and (max-width:544px) {
 
   #logo {
@@ -418,7 +339,6 @@ html {
 @media (min-width:481px) and (max-width:519px) {
   #naviga {
     height: 80px;
-    /* z-index: 1; */
   }
 
   #logo {
@@ -489,9 +409,6 @@ html {
 }
 
 @media (min-width:425px) and (max-width:480px) {
-
-  /* AAA here start from https://www.proglobalbusinesssolutions.com/css-hover-effects/ ...studyit */
-
     nav{
       float: none;
       clear: both;
@@ -550,8 +467,6 @@ html {
     nav li:nth-child(2) a:after{ background: red; }
     nav li:nth-child(3) a:after{ background: red; }
     nav li:last-child a:after{ background: red; }
-
-    /* AAA here finish from https://www.proglobalbusinesssolutions.com/css-hover-effects/ ...studyit */
 
   #naviga {
     height: 70px;
@@ -764,6 +679,27 @@ html {
     width:100%;
     padding-bottom: 600px;
   }
+
+  .goUp {
+  transform: scale(2);
+  border-radius: 50%;
+  position: sticky;
+  left: 85%;
+  top:90%;
+  box-shadow: none;
+  z-index: 1000;
+  border: .5px solid white;
+  /* il display è none perchè viene cambiato da JS */
+  fill:white;
+
+  }
+
+  .innerUp {
+    fill:rgb(186, 25, 13);
+  }
+
+  .goUp:active {
+    transform: scale(2);
 
 
 }

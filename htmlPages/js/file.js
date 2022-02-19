@@ -92,9 +92,12 @@ document.querySelector(".goUp").addEventListener("click", function() {
 });
 
 
-document.querySelector(".hidden").addEventListener("click",function(){
-  this.classList.toggle("active");
-})
+for (i=0; i<document.querySelectorAll(".hidden").length;i++) {
+  document.querySelectorAll(".hidden")[i].addEventListener("click",function(){
+      this.classList.toggle("active");
+  });
+}
+
 
 
 // document.querySelector(".contattami").addEventListener("submit", submitForm);
