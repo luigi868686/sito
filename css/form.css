@@ -1,30 +1,35 @@
 
 
 .contattami {
-display: flex;
-flex-wrap: wrap;
-width: 30%;
-/* height: 350px; */
-/* background:rgb(245,144,145); */
-background: black;
-justify-content: center;
-align-content: flex-start;
-position: sticky;
-top:300px;
+  display: flex;
+  flex-wrap: wrap;
+  background: black;
+  justify-content: center;
+  align-items:flex-start;
+}
+
+.insideContattami{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top:0px;
 }
 
 .testo1Contattati {
-font-size: 30px;
-width: 100%;
-text-align: center;
-color: white;
-margin-top: 150px;
-position: sticky;
-top:150px;
-/* shorthand padding: il primo è
-per top e bottom, il secondo
-è per left and right */
- padding: 0px 20px;
+  font-size: 30px;
+  /* INSERENDO IL 400PX IL DIV RESTA COSI LARGO nell'elemento
+   flex fino a quando non gli dico di essere diversamente */
+  width: 390px;
+  text-align: center;
+  color: white;
+  margin-top: 150px;
+  top:150px;
+  /* shorthand padding: il primo è
+  per top e bottom, il secondo
+  è per left and right */
+  padding: 0px 20px;
 }
 
 
@@ -32,10 +37,8 @@ per top e bottom, il secondo
   width: 90%;
   margin-top: 50px;
   height: 230px;
-  background: red;
+  background: rgb(186, 25, 13);
   box-shadow: 5px 5px 10px 2px #333333;
-  /* position: sticky;
-  top:300px; */
 }
 
 .emailIcon {
@@ -73,7 +76,6 @@ per top e bottom, il secondo
   width: 200px;
 }
 
-
 .emailSubmit {
 font-size: 20px;
 font-weight: bold;
@@ -85,5 +87,8 @@ line-height: 40px;
 text-align: center;
 }
 
-
-/* aaa per vedere le query vai ad articolo */
+@media (min-width:585) and (max-width:950px) {
+  .testo1Contattati {
+    width: 100%;
+  }
+}

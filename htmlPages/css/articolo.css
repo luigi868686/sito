@@ -66,7 +66,7 @@
   padding-top: 7px;
 }
 
-li::before {
+.indice li::before {
   content: counter(li) ".";
   text-align: left;
   font-weight: bold;
@@ -108,24 +108,12 @@ h2 {
 }
 
 .tip{
-  /* background: rgb(250, 250, 110);
-  background-image: linear-gradient(
-    185deg,
-    hsl(0deg 0% 100%) 0%,
-    hsl(45deg 100% 81%) 50%,
-    hsl(47deg 100% 58%) 100%
-  ); */
-
   border:1px solid black;
   width: 90%;
   position:relative;
   margin-top: 20px;
   overflow: hidden;
-  background-color: rgb(246,310,62);
   background-color: rgb(254,207,47);
-
-  /* background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%); */
-
 }
 
 .dettaglio{
@@ -134,19 +122,16 @@ h2 {
   position:relative;
   margin-top: 1px;
   overflow: hidden;
-  background-color: #08e1ae;
   background-color:#00ff00
-
-  /* background-image: linear-gradient(315deg, #08e1ae 0%, #98de5b 74%); */
 }
 
-span {
-  position: absolute;
-  left:50%;
-  transform: translateX(-50%);
-  margin-top: 10px;
-  font-size: 15px;
-  font-weight: bold;
+.tipContattaci{
+  border:1px solid black;
+  width: 90%;
+  position:relative;
+  margin-top: 1px;
+  overflow: hidden;
+  background-color:rgb(186, 25, 13);
 }
 
 .light{
@@ -302,10 +287,18 @@ span {
   padding-right: 10px;
 }
 
-
-
 .colorContentDettaglio {
   background-color: #e6ffe6 ;
+  padding-left:10px;
+  padding-right: 10px;
+}
+
+.colorWhite{
+  color: white;
+}
+
+.colorContentTipContattaci {
+  background-color: rgb(250,90, 80) ;
   padding-left:10px;
   padding-right: 10px;
 }

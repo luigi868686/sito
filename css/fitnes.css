@@ -10,85 +10,15 @@ body {
 }
 
 
+.totale_bianco {
+  display: flex;
+  flex-wrap: nowrap;
+  z-index: 1;
+}
+
 /* un indizio??????? */
 .a {
   display: none;
-}
-
-.close {
-position: absolute;
-right: 30px;
-transform: scale(2.7);
-cursor:pointer;
-}
-
-.openMenu {
-  position: absolute;
-  right: 30px;
-  transform: scale(2.7);
-  cursor:pointer;
-}
-
-#naviga {
-  width: 100%;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content:space-between;
-  background-color: black;
-  position: absolute;
-  position: fixed;
-  top: 0px;
-  z-index: 999;
-  box-shadow: 5px 5px 10px 2px #333333;
-}
-
-#logo {
-  border: 1px solid white;
-  margin-left: 1.5%;
-  padding: 1%;
-  font-size: 30px;
-  color: white;
-  font-weight: lighter;
-  transform: scale(1);
-  transition:0.5s;
-  user-select: none;
-}
-
-#logo:hover {
-  border-color: red;
-  color: red;
-  transform: scale(1.03);
-  transition: 0.5s;
-  cursor: pointer;
-}
-
-#menu {
-  list-style: none;
-  display: flex;
-  text-decoration: none;
-  z-index: 99}
-
-/* sotto il "li" è riferito al menu! */
-li {
-  margin-right: 15px;
-  width: 90px;
-  text-align: center;
-  text-shadow: 2px 2px 4px #000000;
-}
-
-/* sotto il "li a" è riferito al menu! */
-
-li a {
-  text-decoration: none;
-  color: white;
-  font-weight: lighter;
-  font-size: 20px;
-}
-
-li a:hover{
-  font-weight: bold;
-  color:red;
 }
 
 .imagineContainer {
@@ -98,12 +28,14 @@ li a:hover{
   overflow: hidden;
   top:0;
   z-index: -1;
-  background: pink;
+  background: black;
 }
 
 .imaginehome {
   width: 100%;
   position: fixed;
+  top: 80px;
+  filter: blur(2px);
 }
 
 .bene {
@@ -135,11 +67,12 @@ li a:hover{
   top:50%;
   right: 13%;
   transform: scale(0.01);
-  font-size: 31.5px;
+  font-size: 34px;
   font-weight: normal;
   color: red;
   text-align:right;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .scrittaHome2{
@@ -150,16 +83,22 @@ li a:hover{
   color:red;
 }
 
-
 .goUp {
-z-index: 100;
-transform: scale(3);
+transform: scale(2);
 border-radius: 50%;
 position: sticky;
-left: 90%;
+/* right: 400px; */
 top:90%;
-/* box-shadow: 5px 5px 10px 2px #333333; */
+left:90%;
+box-shadow: none;
+z-index: 1000;
+border: .5px solid white;
 /* il display è none perchè viene cambiato da JS */
+fill:white;
+}
+
+.innerUp {
+  fill:rgb(186, 25, 13);
 }
 
 .goUp:active {
@@ -171,390 +110,17 @@ html {
 }
 
 
-
-/* è solo per .guardami */
-@media (min-width:830px) and (max-width:1028px) {
-  #naviga {
-    height: 80px;
-  }
-}
-
-@media (min-width:768px) and (max-width:829px) {
-  #naviga {
-    height: 80px;
-  }
-}
-
-
-@media (min-width:700px) and (max-width:767px) {
-
-  #naviga {
-    height: 80px;
-  }
-
-  #menu {
-    display: block;
-    margin-top: 0px;
-    padding-top: 350px;
-    background-color: black;
-    line-height: 50px;
-  }
-
-  li {
-    border-top: 1px solid white;
-    width:300px;
-    text-align: left;
-    padding-left: 15px;
-    margin-right: 0px;
-    transition: padding-left 0.6s ease-in;
-  }
-
-  li:hover {
-    padding-left: 30px;
-    cursor:pointer;
-    background-color: #1E1E1E;
-    transition: padding-left 0.5s ease-out;
-  }
-
-  li:hover a{
-  color:red;
-  transition:0.5s;
-  }
-
-  li a:hover {
-    color: red;
-    font-weight: normal;
-  }
-
-}
-
-
-@media (min-width:520px) and (max-width:699px) {
-  #naviga {
-    height: 80px;
-    /* z-index: 1; */
-  }
-
-  .menuContainer {
-    position: absolute;
-    background: black;
-    width:300px;
-    right: 0px;
-    box-shadow: 5px 5px 10px 2px #333333;
- }
-
-  #menu {
-    display: block;
-    margin-top: 0px;
-    padding-top: 350px;
-    /* background-color: black; */
-    line-height: 50px;
-  }
-
-  li {
-    border-top: 1px solid white;
-    width:300px;
-    text-align: left;
-    padding-left: 15px;
-    margin-right: 0px;
-    transition: padding-left 0.6s ease-in;
-  }
-
-  li:hover {
-    padding-left: 30px;
-    cursor:pointer;
-    background-color: #1E1E1E;
-    transition: padding-left 0.5s ease-out;
-  }
-
-  li:hover a{
-  color:red;
-  transition:0.5s;
-  }
-
-  li a:hover {
-    color: red;
-    font-weight: normal;
-  }
-}
-
-/* è solo per .guardami */
-@media (min-width:545px) and (max-width:625px) {
-    #naviga {
-      height: 80px;
-      /* z-index: 1; */
-    }
-
-    .menuContainer {
-      position: absolute;
-      background: black;
-      width:300px;
-      right: 0px;
-      box-shadow: 5px 5px 10px 2px #333333;
-   }
-
-    #menu {
-      display: block;
-      margin-top: 0px;
-      padding-top: 350px;
-      /* background-color: black; */
-      line-height: 50px;
-    }
-
-    .close {
-    transform: scale(2.5);
-    }
-
-    .openMenu {
-      transform: scale(2.5);
-    }
-
-  li {
-    border-top: 1px solid white;
-    width:300px;
-    text-align: left;
-    padding-left: 15px;
-    margin-right: 0px;
-    transition: padding-left 0.6s ease-in;
-  }
-
-  li:hover {
-    padding-left: 30px;
-    cursor:pointer;
-    background-color: #1E1E1E;
-    transition: padding-left 0.5s ease-out;
-  }
-
-  li:hover a{
-  color:red;
-  transition:0.5s;
-  }
-
-  li a:hover {
-    color: red;
-    font-weight: normal;
-  }
-}
-
-  /* è solo per .guardami */
-@media (min-width:481px) and (max-width:544px) {
-
-  #logo {
-    position:absolute;
+/* solo per contenitore_bianco */
+@media (min-width:0px) and (max-width:699px){
+  .totale_bianco {
+    display: flex;
+    flex-wrap: wrap;
     z-index: 1;
-    margin-left: 10px;
-    font-size: 20px;
-  }
-
-  .close {
-  transform: scale(2);
-  }
-
-  .openMenu {
-    transform: scale(2);
   }
 }
 
-@media (min-width:481px) and (max-width:519px) {
-  #naviga {
-    height: 80px;
-    /* z-index: 1; */
-  }
-
-  #logo {
-    position:absolute;
-    z-index: 1;
-    margin-left: 10px;
-    font-size: 20px;
-  }
-
-  .close {
-  transform: scale(2);
-  }
-
-  .openMenu {
-    transform: scale(2);
-  }
-
-  .menuContainer {
-    position: absolute;
-    background: black;
-    width:250px;
-    right: 0px;
-    box-shadow: 5px 5px 10px 2px #333333;
- }
-
-  #menu {
-    display: block;
-    margin-top: 0px;
-    padding-top: 350px;
-    /* background-color: black; */
-    line-height: 50px;
-  }
-
-  li {
-    border-top: 1px solid white;
-    width:300px;
-    text-align: left;
-    padding-left: 15px;
-    margin-right: 0px;
-    transition: padding-left 0.6s ease-in;
-  }
-
-  li:hover {
-    padding-left: 30px;
-    cursor:pointer;
-    background-color: #1E1E1E;
-    transition: padding-left 0.5s ease-out;
-  }
-
-  li:hover a{
-  color:red;
-  transition:0.5s;
-  }
-
-  li a:hover {
-    color: red;
-    font-weight: normal;
-  }
-
-  .contenitoreVideo{
-    z-index: 1;
-    width: 100%;
-    height: 150px;
-    overflow: hidden;
-    position: static;
-    margin-top: 100px;
-  }
-}
 
 @media (min-width:425px) and (max-width:480px) {
-
-  /* AAA here start from https://www.proglobalbusinesssolutions.com/css-hover-effects/ ...studyit */
-    nav{
-      float: none;
-      clear: both;
-      width: 30%;
-      background: #eee;
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0px;
-      background-color: #e74c3c;
-      padding-top: 350px;
-    }
-
-    nav li{
-      float: none;
-      width: 100%;
-      text-shadow: none;
-    }
-
-    nav li a {
-      display: block;
-      width: 100%;
-      padding: 20px;
-      border-left: 5px solid;
-      position: relative;
-      z-index: 2;
-      text-decoration: none;
-      color: #444;
-      box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      background: #fff;
-    }
-
-    nav li a:hover{ border-bottom: 0px; color: #fff;}
-    nav li:first-child a{ border-left: 20px solid red; }
-    nav li:nth-child(2) a{ border-left: 20px solid red; }
-    nav li:nth-child(3) a{ border-left: 20px solid red; }
-    nav li:last-child a{ border-left: 20px solid red; }
-
-    nav li a:after {
-      content: "";
-      height: 100%;
-      left: 0;
-      top: 0;
-      width: 0px;
-      position: absolute;
-      transition: all 0.3s ease 0s;
-      -webkit-transition: all 0.3s ease 0s;
-      z-index: -1;
-    }
-
-    nav li a:hover:after{ width: 100%; }
-    nav li:first-child a:after{ background: red; }
-    nav li:nth-child(2) a:after{ background: red; }
-    nav li:nth-child(3) a:after{ background: red; }
-    nav li:last-child a:after{ background: red; }
-
-    /* AAA here finish from https://www.proglobalbusinesssolutions.com/css-hover-effects/ ...studyit */
-
-  #naviga {
-    height: 80px;
-  }
-
-  #logo {
-    position:absolute;
-    z-index: 1;
-    margin-left: 10px;
-    font-size: 20px;
-  }
-
-  .close {
-  transform: scale(2);
-  }
-
-  .openMenu {
-    transform: scale(2);
-  }
-
-  .menuContainer {
-    position: absolute;
-    background: black;
-    width:100%;
-    right: 0px;
-    box-shadow: 5px 5px 10px 2px #333333;
- }
-
-  #menu {
-    display: block;
-    margin-top: 0px;
-    padding-top: 950px;
-    /* background-color: black; */
-    line-height: 50px;
-    width: 100%;
-    padding-bottom: 400px;
-    background: black;
-  }
-
-  li {
-    border-top: 1px solid white;
-    width:100%;
-    text-align: center;
-    padding-left: 0px;
-    margin-right: 0px;
-    transition: padding-left 0.6s ease-in;
-  }
-
-  li:hover {
-    /* padding-left: 30px; */
-    cursor:pointer;
-    background-color: #1E1E1E;
-    transition: padding-left 0.5s ease-out;
-  }
-
-  li:hover a{
-  color:red;
-  transition:0.5s;
-  }
-
-  li a:hover {
-    color: red;
-    font-weight: normal;
-  }
 
   .scrittaHome{
     transform: scale(0.01);
@@ -564,15 +130,6 @@ html {
   .scrittaHome2{
     font-size: 10vw;
   }
-
-  .contenitoreVideo{
-    z-index: 1;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    position: static;
-    margin-top: 200px;
-    }
 
   .goUp {
   transform: scale(2);
@@ -585,125 +142,6 @@ html {
 /* ultimo media a 400 */
 
 @media (min-width:0px) and (max-width:424px)  {
-
-/* AAA here start from https://www.proglobalbusinesssolutions.com/css-hover-effects/ ...studyit */
-  nav{
-    float: none;
-    clear: both;
-    width: 30%;
-    background: #eee;
-  }
-
-  nav ul {
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
-  }
-
-  nav li{
-    float: none;
-    width: 100%;
-    text-shadow: none;
-  }
-
-  nav li a {
-    display: block;
-    width: 100%;
-    padding: 20px;
-    border-left: 5px solid;
-    position: relative;
-    z-index: 2;
-    text-decoration: none;
-    color: #444;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    background: #fff;
-  }
-
-  nav li a:hover{ border-bottom: 0px; color: #fff;}
-  nav li:first-child a{ border-left: 20px solid red; }
-  nav li:nth-child(2) a{ border-left: 20px solid red; }
-  nav li:nth-child(3) a{ border-left: 20px solid red; }
-  nav li:last-child a{ border-left: 20px solid red; }
-
-  nav li a:after {
-    content: "";
-    height: 100%;
-    left: 0;
-    top: 0;
-    width: 0px;
-    position: absolute;
-    transition: all 0.3s ease 0s;
-    -webkit-transition: all 0.3s ease 0s;
-    z-index: -1;
-  }
-
-  nav li a:hover:after{ width: 100%; }
-  nav li:first-child a:after{ background: red; }
-  nav li:nth-child(2) a:after{ background: red; }
-  nav li:nth-child(3) a:after{ background: red; }
-  nav li:last-child a:after{ background: red; }
-
-  /* AAA here finish from https://www.proglobalbusinesssolutions.com/css-hover-effects/ ...studyit */
-
-
-  #naviga {
-    height: 80px;
-    /* z-index: 1; */
-  }
-
-  #logo {
-    border:none;
-    width: 100px;
-    z-index: 1;
-    /* top: -100px; */
-    /* ..... */
-
-    margin-left: 0;
-    padding: 0;
-    font-size: 0;
-    color: white;
-    font-weight: none;
-    transform: scale(1);
-    transition:none;
-    user-select: none;
-  }
-
-
-
-
-
-
-
-
-  .close {
-  transform: scale(2);
-  }
-
-  .openMenu {
-    transform: scale(2);
-  }
-
-  .menuContainer {
-    position: absolute;
-    width:100%;
-    right: 0px;
-    box-shadow: 5px 5px 10px 2px #333333;
-    height: 80px;
- }
-
-
-  #menu {
-    display: block;
-    margin-top: 0px;
-    padding-top: 100px;
-    background-color: black;
-    line-height: 50px;
-    width:100%;
-    padding-bottom: 600px;
-  }
-
 
   .scrittaHome{
     transform: scale(0.01);

@@ -3,15 +3,15 @@
   display: none;
 }
 .contenitore_articoli {
-  width: 70%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content:center;
+  justify-content:space-around;
   padding-bottom: 100px;
   padding-top: 50px;
-  padding-left:min(35px);
-  background-image: url(../images/sfondo3.jpg);
+  padding-left:min(25px);
+  /* background-image: url(../images/sfondo3.jpg); */
   background-repeat: round;
 }
 
@@ -22,7 +22,7 @@
   position: relative;
   transform: scale(1);
   transition: 0.5s;
-  margin-right: min(35px);
+  margin-right: min(25px);
   perspective: 1000px;
   perspective-origin: top;
 }
@@ -413,39 +413,27 @@ width:40%;
   }
 }
 
-@media (min-width:850px) and (max-width:979px) {
+@media (min-width:700px) and (max-width:979px) {
 
   .contenitore_articoli {
     width: 70%;
     justify-content: space-around;
   }
-
-  .contattami {
-width:30%;
-  }
-
-  .testo1Contattati{
-    font-size: 24px;
-  }
 }
 
-@media (min-width:650px) and (max-width:849px) {
+/* @media (min-width:650px) and (max-width:849px) {
 
   .contenitore_articoli {
     width: 50%;
     justify-content: space-around;
   }
 
-  .contattami {
-width:50%;
-  }
-}
+} */
 
-@media (min-width:585px) and (max-width:649px) {
+@media (min-width:585px) and (max-width:699px) {
 
   .contenitore_articoli {
     width: 100%;
-    justify-content: left;
   }
 
   .contattami {
