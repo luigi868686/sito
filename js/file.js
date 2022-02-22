@@ -154,8 +154,26 @@ document.querySelector(".goUp").addEventListener("click", function() {
   window.scrollTo(0, 0)
 });
 
+// api share
+
+shareBtn = document.querySelector(".share");
+shareBtn.addEventListener("click", function(){
+  if(navigator.share){
+    navigator.share({
+      text: "leggi questo articolo",
+      url: "www.google.com"
+    }).then(()=>{
+      console.log("thanks for sharing");
+    })
+    .catch(console.error);
+  } else {
+    alert("not supported")
+  }
+});
 
 
+
+//
 // document.querySelector(".contattami").addEventListener("submit", submitForm);
 //
 // function submitForm(event) {
