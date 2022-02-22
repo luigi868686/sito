@@ -134,9 +134,6 @@ function close () {
   }
 };
 
-
-
-
 window.addEventListener("scroll",function() {
   y=window.scrollY
   // console.log(y)
@@ -161,7 +158,7 @@ shareBtn.addEventListener("click", function(){
   if(navigator.share){
     navigator.share({
       text: "leggi questo articolo",
-      url: "www.google.com"
+      url: "https://luigi868686.github.io/sito/htmlPages/article1.html"
     }).then(()=>{
       console.log("thanks for sharing");
     })
