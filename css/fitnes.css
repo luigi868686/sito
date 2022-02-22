@@ -101,9 +101,7 @@ fill:white;
   fill:rgb(186, 25, 13);
 }
 
-.goUp:active {
-  transform: scale(3) translateY(4px);
-}
+
 
 html {
   scroll-behavior: smooth;
@@ -153,19 +151,11 @@ html {
   }
 
   .goUp {
-  transform: scale(1);
+  transform: scale(2);
   left: 89%;
   top:90%;
   /* il display è none perchè viene cambiato da JS */
   }
-
-  .goUp:active {
-  transform: scale(1);
-  left: 89%;
-  top:90%;
-  /* il display è none perchè viene cambiato da JS */
-  }
-
 }
 
 
