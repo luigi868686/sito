@@ -153,19 +153,53 @@ document.querySelector(".goUp").addEventListener("click", function() {
 
 // api share
 
-shareBtn = document.querySelector(".share");
-shareBtn.addEventListener("click", function(){
-  if(navigator.share){
-    navigator.share({
-      text: "leggi questo articolo",
-      url: "https://luigi868686.github.io/sito/htmlPages/article1.html"
-    }).then(()=>{
-      console.log("thanks for sharing");
-    })
-    .catch(console.error);
-  } else {
-    alert("not supported")
-  }
+// shareBtn = document.querySelector(".share");
+// shareBtn.addEventListener("click", function(){
+//   if(navigator.share){
+//     navigator.share({
+//       text: "leggi questo articolo",
+//       url: "https://luigi868686.github.io/sito/htmlPages/article1.html"
+//     }).then(()=>{
+//       console.log("thanks for sharing");
+//     })
+//     .catch(console.error);
+//   } else {
+//     alert("not supported")
+//   }
+// });
+
+document.querySelector(".shareAll").style.display="none";
+document.querySelector(".share").addEventListener("click",function(){
+  document.querySelector(".shareAll").style.display="";
+
+});
+
+document.querySelector(".closeShare").addEventListener("click", function(){
+  document.querySelector(".shareAll").style.display="none";
+})
+
+// share
+const pageUrl = location.href;
+console.log(pageUrl);
+const message = "Ciao! Dai un'occhiata a questo articolo!"
+
+// preso dal sito: https://faq.whatsapp.com/general/chats/how-to-use-click-to-chat
+const whatzupApi = `https://wa.me/?text=${pageUrl}. ${message}`
+
+// preso dal sito:https://core.telegram.org/widgets/share
+const telegramApi = `https://t.me/share/url?url=${pageUrl}&text=${message}`
+
+
+document.querySelector(".whatzup").addEventListener("click",function(){
+  // window.open(url=whatzupApi, target="blank");
+});
+
+document.querySelector(".fb").addEventListener("click",function(){
+
+});
+
+document.querySelector(".telegram").addEventListener("click",function(){
+
 });
 
 
