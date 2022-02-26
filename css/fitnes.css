@@ -9,18 +9,6 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-
-.totale_bianco {
-  display: flex;
-  flex-wrap: nowrap;
-  z-index: 1;
-}
-
-/* un indizio??????? */
-.a {
-  display: none;
-}
-
 .imagineContainer {
   position: relative;
   width:100%;
@@ -37,6 +25,105 @@ body {
   top: 80px;
   filter: blur(2px);
 }
+
+.presentazione{
+  background-color: rgb(186, 25, 13);
+  height:550px;
+  padding: 40px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.presentazioneBlur{
+  background-image: url("../images/sfondo.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  filter: blur(2px);
+
+}
+
+.presentazioneOpacity{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 60%;
+  background: #bab7b7;
+  opacity: 0.6;
+  box-shadow: 5px 5px 10px 2px black;
+
+}
+
+.presentazioneTesto{
+  width: 80%;
+  height: 60%;
+  position: relative;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.presentazioneTesto h2{
+margin-top: 10px;
+color: white;
+
+}
+
+.presentazioneParagrafo{
+  width: 100%;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 30px;
+  color: black;
+  z-index: 3;
+  text-align: center;
+}
+
+.presentazioneParagrafo strong{
+  color: rgb(186, 25, 13);
+}
+
+.presentazioneParagrafo .strongWhite{
+  color: white;
+}
+
+.presentazione button {
+  position: absolute;
+  right: 2%;
+  bottom: 2%;
+  width: 220px;
+  height: 30px;
+  background-color: rgb(186, 25, 13);
+  border:none;
+  border-radius:20px;
+  font-size: 18px;
+  color: white;
+  z-index: +2;
+  cursor: pointer;
+}
+
+.totale_bianco {
+  display: flex;
+  flex-wrap: nowrap;
+  z-index: 1;
+}
+
+/* un indizio??????? */
+.a {
+  display: none;
+}
+
+
 
 .bene {
   position: absolute;
@@ -179,6 +266,15 @@ html {
 
   .imagineContainer {
     height: 405px;
+  }
+  .presentazione{
+    height:400px;
+  }
+
+  .presentazione button {
+    right: 50%;
+    transform: translate(50%);
+
   }
 }
 /* 1) FINE MEDIA PER L'IMMAGINE HOME */

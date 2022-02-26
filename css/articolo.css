@@ -520,6 +520,7 @@ width:100%;
 
   .primo{
     width: 70px;
+    height: 210px;
     z-index: 100;
     right: 0;
     top: 0;
@@ -532,7 +533,7 @@ width:100%;
     width: 70px;
     /* L'ALTEZZA VA AGGIUSTATA DI PARI PASSO CON
     QUELLA DEL DIVICONE COSI DA RAGGIUNGERE IL 100%COMPLESSIVO */
-    height: 45%;
+    height: 35%;
     background: black;
     display: block;
     flex-wrap: wrap;
@@ -560,24 +561,23 @@ width:100%;
     color:white;
     text-align: center;
     font-weight: bolder;
-
   }
 
   .divIcone{
     width: 70px;
     /* L'ALTEZZA VA AGGIUSTATA DI PARI PASSO CON
     QUELLA DELLA DATA COSI DA RAGGIUNGERE IL 100%COMPLESSIVO */
-    height: 55%;
+    height: 65%;
     color:white;
     cursor: pointer;
     user-select: none;
-    display: block;
+    display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    align-content: center;
+    align-content: space-around;
     background: rgb(186, 25, 13);
-    padding-bottom: 5px;
+    padding-bottom: 10px;
   }
 
 
